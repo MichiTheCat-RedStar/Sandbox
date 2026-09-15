@@ -1,0 +1,127 @@
+<usr> How to build a local AI focused on data quality? <ai> Start with a narrow task and clear metrics. Quality beats quantity: 1k-10k clean, verified examples often beat 1M noisy ones. Pipeline: collect -> clean -> dedupe -> filter -> label -> train -> evaluate -> iterate.
+<usr> What data to collect? <ai> Only relevant domain sources with clear licenses. Use books, docs, papers, expert FAQs, internal rules. Exclude spam, ads, bots, outdated, contradictory content.
+<usr> How to clean data? <ai> Normalize Unicode, encodings, whitespace. Remove HTML, boilerplate, nav, ads, duplicates, truncated text. Check language, length, toxicity, PII, secrets, harmful instructions.
+<usr> How to deduplicate? <ai> Exact hash for copies; MinHash/SimHash for near-dupes; embeddings for semantic dupes. Tune threshold on validation. Dupes distort training and inflate scores.
+<usr> How to score example quality? <ai> Criteria: relevance, factual accuracy, completeness, clarity, style, safety, no PII, verifiability. Score 1-5 and reason. Quarantine disputed items.
+<usr> Data format for training? <ai> SFT: JSONL with instruction, input, output. Chat: messages with role/user/assistant. Preferences: prompt, chosen, rejected. Pretrain: clean text. Keep versions and manifests.
+<usr> How to label data? <ai> Give labelers a rubric, examples, calibration. Use at least 2 independent ratings, then arbitrate. Track agreement (Cohen kappa). Log edits and reasons.
+<usr> How to train a local model? <ai> Start from open-weight: Llama 3, Mistral, Qwen, Gemma, Phi, DeepSeek. Save VRAM: LoRA/QLoRA, 4-bit, gradient checkpointing. For chat: SFT, then DPO/ORPO.
+<usr> How to use RAG? <ai> RAG adds current knowledge without retraining. Index only verified docs. Chunks 300-800 tokens with overlap. Store metadata: source, date, version, rights. Evaluate retrieval and faithfulness.
+<usr> How to evaluate results? <ai> Holdout set, human eval, win rate, accuracy, F1, perplexity, hallucination rate, toxicity, PII leaks, latency, VRAM. Compare to baseline. Regressions are blockers.
+<usr> Which metrics matter most? <ai> For quality: factual accuracy, usefulness, safety, instruction following, stability. For local: speed, memory, offline work. Do not optimize only loss.
+<usr> Implementation pipeline? <ai> 1) Task and metrics. 2) Collect and license. 3) Clean and dedupe. 4) Filters and PII. 5) Label. 6) Train. 7) Evaluate. 8) Errors -> data. 9) Versioning. 10) Monitoring.
+<usr> Tools to use? <ai> Collect: Scrapy, trafilatura. Clean: datatrove, fastText, langdetect. Dedupe: MinHash, SimHash, FAISS. Train: Axolotl, Unsloth, TRL, Transformers. Inference: llama.cpp, Ollama, vLLM, LM Studio.
+<usr> How to store data? <ai> JSONL for training, Parquet for analytics. Version with DVC, Git LFS, hashes. Store licenses, sources, dates, consents. Split train/val/test by time or domain.
+<usr> How to ensure privacy? <ai> Run locally, no telemetry, encrypt disk, role-based access. Remove PII/secrets before training. For sensitive data: on-prem and audit. Do not log prompts without consent.
+<usr> Common mistakes? <ai> Too much junk, dupes, test leakage, contradictory answers, bias, style overfitting, forgetting basic skills, no eval. Fix: curate, dedupe, clean test, diverse data, regular eval.
+<usr> What gives the biggest gain? <ai> Clean expert examples, precise instructions, phrasing diversity, negative examples, preference pairs, RAG for facts, error-driven iterations. Label quality beats model size.
+<usr> How to start in a week? <ai> Pick a 7-8B model, collect 1k-3k quality pairs, clean, label, train LoRA, evaluate on 100-300 examples, fix top 20 errors, repeat. Keep an experiment log.
+<usr> Which licenses to check? <ai> Check data and model licenses: Apache 2.0, MIT, CC-BY, CC-BY-SA, research-only. Do not mix incompatible ones. Keep attribution. For commercial use: legal review.
+<usr> Summary? <ai> Local AI with data quality focus = narrow task + clean licensed data + dedupe + PII filter + expert labels + LoRA/SFT + RAG + strict eval + iterations. Start small and measure.
+<usr> How to write annotation guidelines? <ai> Define scope, edge cases, label definitions, examples of good and bad, decision tree, escalation path. Pilot on 100 items, measure agreement, refine. Keep guidelines versioned.
+<usr> How to handle ambiguous examples? <ai> Mark as ambiguous, route to senior labeler or expert. Do not force a label. Track ambiguous rate. If high, clarify task or data source.
+<usr> What is active learning? <ai> Train initial model, score unlabeled pool by uncertainty or diversity, label most informative, retrain. Saves labeling budget and improves quality per example.
+<usr> How to use synthetic data? <ai> Generate with strong teacher model, then filter by rules, dedupe, and human review. Use for coverage, style, or rare cases. Never trust synthetic without verification.
+<usr> How to avoid synthetic data collapse? <ai> Mix real and synthetic, keep real anchor set, filter by quality, limit synthetic ratio, evaluate on real holdout. Monitor diversity and factuality.
+<usr> How to evaluate data quality? <ai> Metrics: duplicate rate, PII rate, toxicity rate, language mismatch, length distribution, label agreement, coverage of intents, factual error rate, source diversity.
+<usr> How to split train/val/test? <ai> Split by time, source, or user to avoid leakage. Keep test frozen. Use stratify for rare classes. Never tune on test. Document split logic.
+<usr> How to detect leakage? <ai> Check exact and near-duplicate overlap between train and test. Use MinHash, embeddings, or n-gram overlap. Remove leaked items. Re-evaluate.
+<usr> How to handle class imbalance? <ai> Collect more minority examples, use targeted sampling, or weighted loss. Do not oversample without cleaning. Evaluate per-class metrics, not only accuracy.
+<usr> How to reduce bias? <ai> Audit data for stereotypes, underrepresentation, and labels. Collect diverse sources, balance demographics, use bias metrics, and human review. Document limitations.
+<usr> How to red team a local AI? <ai> Build adversarial prompts for jailbreaks, PII leaks, harmful advice, bias, and hallucinations. Test offline. Fix with data, filters, and system prompts. Repeat.
+<usr> How to monitor deployed model? <ai> Log latency, errors, refusals, user feedback, drift in inputs, and safety flags. Sample outputs for review. Alert on regressions. Do not log PII without consent.
+<usr> How to handle user feedback? <ai> Collect thumbs up/down, corrections, and comments. Triage: data bug, model bug, or product bug. Add high-value cases to eval and training. Close the loop.
+<usr> How to version datasets? <ai> Use semantic versions, hashes, and manifests. Record source, date, filters, labeler, and code commit. Store train/val/test separately. Reproduce any run.
+<usr> How to store large datasets? <ai> Use Parquet or Arrow for columnar storage. Shard by size. Keep raw, cleaned, and labeled layers. Use object storage with checksums. Index metadata.
+<usr> How to detect PII? <ai> Use regex for emails, phones, IDs, cards, IPs. Use NER for names, locations, orgs. Add domain-specific patterns. Human review for edge cases. Redact or drop.
+<usr> How to handle secrets? <ai> Scan for API keys, tokens, passwords, private keys. Use entropy checks and known patterns. Remove before training. Rotate any leaked secrets immediately.
+<usr> How to chunk documents for RAG? <ai> Split by headings, then by tokens 300-800 with 10-20% overlap. Keep tables and code intact. Add title and source to each chunk. Evaluate retrieval.
+<usr> How to evaluate RAG? <ai> Measure retrieval recall, precision, MRR, and answer faithfulness. Use human eval for factuality. Check citation accuracy. Test with unanswerable questions.
+<usr> How to choose embedding model? <ai> Pick based on language, domain, context length, and license. Evaluate on your retrieval set. Smaller models may suffice. Normalize vectors. Re-index when changed.
+<usr> How to choose chunk size? <ai> Test 128, 256, 512, 1024 tokens. Smaller chunks improve precision, larger improve context. Use overlap. Measure end-to-end answer quality, not just retrieval.
+<usr> How to fine-tune safely? <ai> Start with LoRA rank 8-64, learning rate 1e-5 to 2e-4, 1-3 epochs. Use early stopping. Keep base model frozen. Evaluate on held-out set. Save adapters and configs.
+<usr> How to avoid catastrophic forgetting? <ai> Mix general instruction data with domain data. Use low learning rate and few epochs. Keep a general eval set. If it drops, reduce domain ratio or add replay.
+<usr> How to evaluate instruction following? <ai> Use rubric: follows format, constraints, tone, length, and safety. Test with adversarial instructions. Compare to baseline. Track pass rate per category.
+<usr> How to improve reasoning? <ai> Add step-by-step examples, chain-of-thought data, and verification. Train on correct and incorrect traces with labels. Evaluate final answer, not just style.
+<usr> How to handle long context? <ai> Use models with long context, chunk and retrieve, or summarize. Test needle-in-haystack. Keep important info near start or end. Monitor memory and latency.
+<usr> How to quantize a local model? <ai> Use GGUF, GPTQ, AWQ, or bitsandbytes. Test 4-bit vs 8-bit on your eval. Check quality drop, speed, and VRAM. Some tasks are sensitive to quantization.
+<usr> How to run on CPU? <ai> Use llama.cpp with GGUF. Choose Q4_K_M or Q5_K_M. Set threads to physical cores. Use mmap. Expect slower speed. Optimize prompt and batch size.
+<usr> How to run on GPU? <ai> Use vLLM, TGI, or llama.cpp with CUDA. Fit model in VRAM. Use batching, KV cache, and flash attention. Monitor utilization and temperature.
+<usr> How to reduce latency? <ai> Use smaller model, quantization, speculative decoding, and caching. Limit context. Stream tokens. Batch requests. Precompute embeddings. Profile end-to-end.
+<usr> How to design system prompts? <ai> Define role, task, constraints, format, and refusal policy. Keep concise. Test variations. Avoid contradictions. Version and evaluate.
+<usr> How to use tools? <ai> Define strict schemas, validate inputs, and handle errors. Log calls. Limit permissions. Test with mocked tools. Evaluate task success, not just call accuracy.
+<usr> How to build agents? <ai> Start with simple tool use. Add planning only if needed. Use memory carefully. Evaluate on multi-step tasks. Guard against loops, unsafe actions, and cost.
+<usr> How to manage cost? <ai> Estimate tokens, GPU hours, storage, and labeling. Use smaller models, caching, and batching. Prioritize high-impact data. Track cost per successful task.
+<usr> How to select a model? <ai> Compare license, size, context, language, speed, and quality on your eval. Start with 7-8B. Scale only if metrics justify. Avoid switching too often.
+<usr> How to keep data fresh? <ai> Schedule re-crawls, version snapshots, and drift detection. Retire outdated docs. Re-index RAG. Retrain or fine-tune on new high-quality data. Monitor performance.
+<usr> How to document a dataset? <ai> Write datasheet: motivation, composition, collection, labeling, preprocessing, uses, limitations, biases, licenses, and maintenance. Publish with the dataset.
+<usr> How to ensure reproducibility? <ai> Fix seeds, versions, and configs. Containerize environment. Log commands. Save model, tokenizer, and adapter. Use DVC or similar. Test from clean checkout.
+<usr> How to do human eval? <ai> Define rubric, sample randomly, blind model names, use multiple raters, and compute agreement. Include adversarial and edge cases. Report confidence intervals.
+<usr> How to use LLM as judge? <ai> Use clear rubric, reference answers, and position swap. Calibrate against human labels. Watch for bias, verbosity, and self-preference. Do not rely solely on it.
+<usr> How to handle refusals? <ai> Define policy. Train on safe refusals and safe completions. Evaluate false refusals and unsafe answers. Adjust thresholds. Log and review.
+<usr> How to handle jailbreaks? <ai> Red team continuously. Add input filters, system prompts, and output filters. Train on adversarial examples. Monitor. No single fix is enough.
+<usr> How to build feedback loop? <ai> Collect user signals, triage, label, add to eval, then to training. Measure improvement. Automate where safe. Keep humans in the loop for quality.
+<usr> What is a data card? <ai> A concise summary of dataset: purpose, sources, size, labels, preprocessing, splits, licenses, PII handling, known issues, and contact. Attach to every version.
+<usr> What is a model card? <ai> A summary of model: architecture, training data, intended use, limitations, bias, safety, eval results, and license. Publish with weights.
+<usr> How to start small? <ai> Pick one task, one domain, one model. Build 500-1000 clean examples. Train LoRA. Evaluate. Fix top errors. Repeat. Expand only after quality is stable.
+<usr> Final advice? <ai> Treat data as the product. Curate, document, version, and measure. Local AI quality comes from disciplined data work, not just bigger models. Iterate weekly.
+<usr> How to build a data flywheel? <ai> Deploy, collect failures, label, add to eval, train, measure, repeat. Prioritize high-impact errors. Automate collection, keep human review for quality.
+<usr> How to triage model errors? <ai> Group by cause: data gap, label error, prompt issue, model limit, or safety. Fix data first if repeated. Track fix rate per week.
+<usr> How to create eval sets? <ai> Build 100-500 real, diverse, hard examples per task. Include edge cases, adversarial, and unanswerable. Freeze and version. Do not train on it.
+<usr> How to use golden answers? <ai> Store reference outputs with rubric. Use for human eval and LLM judge calibration. Update only with review. Keep provenance.
+<usr> How to measure hallucination? <ai> Ask for citations, verify claims against sources, and use factuality eval. Track unsupported claim rate. RAG reduces but does not remove it.
+<usr> How to handle unknown answers? <ai> Train model to say "I do not know" when evidence is missing. Add examples. Evaluate false confidence and false refusal. Tune threshold.
+<usr> How to do data augmentation? <ai> Paraphrase, back-translate, or vary format. Keep meaning and facts. Filter duplicates and errors. Do not augment test. Measure gain on eval.
+<usr> How to handle multilingual data? <ai> Separate per language. Check translation quality. Use language-specific tokenizers or models. Balance languages. Evaluate per language, not only average.
+<usr> How to handle code data? <ai> Keep code and comments. Check license. Filter non-compiling or insecure snippets. Use repo-level context. Evaluate pass@k and security.
+<usr> How to handle math data? <ai> Verify answers with solvers. Keep step-by-step solutions. Remove ambiguous problems. Evaluate exact match and reasoning validity.
+<usr> How to handle medical data? <ai> Use expert review, strict privacy, and disclaimers. Follow regulations. Prefer official guidelines. Red team for harmful advice. Do not ship without clinical validation.
+<usr> How to handle legal data? <ai> Use licensed sources, cite jurisdiction and date. Avoid giving legal advice. Add disclaimers. Expert review. Monitor updates.
+<usr> How to handle financial data? <ai> Use licensed, timestamped sources. Avoid personalized advice. Add risk warnings. Verify numbers. Audit for bias and manipulation.
+<usr> How to handle children data? <ai> Avoid collecting. If needed, get consent, minimize, and comply with COPPA/GDPR-K. Add strong safety filters.
+<usr> How to comply with GDPR? <ai> Lawful basis, data minimization, purpose limit, storage limit, access, deletion, and DPIA. Document. Local processing helps but does not remove duties.
+<usr> How to do a DPIA? <ai> Describe processing, necessity, risks, and mitigations. Consult DPO. Review vendors. Keep record. Update on changes.
+<usr> How to handle deletion requests? <ai> Find data across raw, cleaned, train, and backups. Delete or anonymize. Retrain if needed. Document. Verify.
+<usr> How to anonymize data? <ai> Remove direct IDs, generalize quasi-IDs, and test re-identification risk. Use k-anonymity or differential privacy where needed. Human review.
+<usr> How to use differential privacy? <ai> Add noise during training or aggregation. Tune epsilon. Measure quality drop. Use for sensitive data. Combine with other controls.
+<usr> How to secure local AI? <ai> Encrypt disk, use OS sandbox, restrict network, sign models, scan dependencies, and patch. Limit plugin permissions. Log access. Backup offline.
+<usr> How to sign models? <ai> Hash weights and configs, use GPG or sigstore, publish checksums. Verify before load. Keep private keys offline.
+<usr> How to scan dependencies? <ai> Use pip-audit, safety, trivy, or grype. Pin versions. Build SBOM. Patch critical CVEs. Rebuild containers.
+<usr> How to containerize? <ai> Use minimal base, non-root user, read-only FS, no secrets in image, and fixed versions. Scan image. Limit resources. Log to stdout.
+<usr> How to deploy offline? <ai> Ship model, tokenizer, embeddings, and index on disk. Use llama.cpp or vLLM. Provide update bundles. Test air-gapped. Document hardware.
+<usr> How to choose hardware? <ai> For 7B 4-bit: 8-12 GB VRAM or 16 GB RAM. For 13B: 16 GB VRAM. For 70B: 48 GB+ or multi-GPU. CPU works but slower.
+<usr> How to estimate VRAM? <ai> Weights: params * bits / 8. Add KV cache, activations, and overhead. Use 1.2-1.5x margin. Test with your context length.
+<usr> How to optimize KV cache? <ai> Use grouped-query attention, paged attention, and quantization. Limit context. Clear cache between sessions. Monitor memory.
+<usr> How to use speculative decoding? <ai> Pair small draft model with large target. Tune draft length. Gains depend on acceptance rate. Test latency and quality.
+<usr> How to batch requests? <ai> Use continuous batching in vLLM or TGI. Sort by length. Set max batch tokens. Monitor latency. Avoid OOM.
+<usr> How to cache responses? <ai> Cache exact prompts and embeddings. Use TTL and scope. Invalidate on data change. Do not cache PII without consent.
+<usr> How to log safely? <ai> Redact PII, hash user IDs, set retention, restrict access, and encrypt. Log errors and metrics, not full prompts by default.
+<usr> How to monitor drift? <ai> Track input length, language, topic, refusal rate, and score distribution. Compare to baseline. Alert on shifts. Sample for review.
+<usr> How to do A/B testing? <ai> Randomize users, define primary metric, run long enough, check guardrails, and avoid peeking. Document. Roll back on harm.
+<usr> How to do canary release? <ai> Route small traffic to new model. Monitor errors, safety, and latency. Expand slowly. Keep rollback ready.
+<usr> How to handle incidents? <ai> Have playbook: detect, contain, assess, notify, fix, review. Preserve logs. Update eval. Train on failure. Communicate.
+<usr> How to build a team? <ai> Roles: data curator, labeler, ML engineer, evaluator, domain expert, and safety reviewer. Start small. Define ownership. Weekly review.
+<usr> How to run weekly data review? <ai> Sample outputs, review errors, label fixes, update eval, and assign actions. Track metrics. Celebrate quality wins. Keep notes.
+<usr> How to prioritize data work? <ai> Rank by user impact, frequency, safety, and cost. Fix high-frequency, high-harm first. Use Pareto. Measure before and after.
+<usr> How to set quality gates? <ai> Define minimum agreement, PII rate, duplicate rate, safety pass, and eval score. Block release if failed. Automate checks in CI.
+<usr> How to use CI for data? <ai> Run schema, dedupe, PII, toxicity, and license checks on every commit. Fail fast. Version artifacts. Test training smoke.
+<usr> How to test training? <ai> Smoke test on 100 examples. Check loss, speed, and output. Full run only after. Save logs. Compare to baseline.
+<usr> How to do error analysis? <ai> Sample 100 errors, tag cause, count, and prioritize. Look for patterns. Fix data or prompt first. Re-measure. Repeat.
+<usr> How to write a good eval? <ai> Cover task, edge cases, safety, and refusal. Use real inputs. Define pass criteria. Include negative examples. Keep it small but hard.
+<usr> How to avoid overfitting eval? <ai> Keep test hidden. Rotate fresh samples. Use multiple sets. Track public vs private. Do not train on eval.
+<usr> How to use weak supervision? <ai> Combine rules, heuristics, and model labels. Estimate noise. Validate on gold set. Use for coverage, not final truth.
+<usr> How to use crowdsourcing? <ai> Use clear guidelines, gold questions, attention checks, and redundancy. Pay fairly. Audit. Escalate hard cases.
+<usr> How to use experts? <ai> Reserve for hard, high-risk, or domain cases. Give context and tools. Track time and agreement. Build a bench.
+<usr> How to reduce labeling cost? <ai> Pre-label with model, filter low-confidence, use active learning, and batch similar items. Keep human review for quality.
+<usr> How to measure label quality? <ai> Use gold items, agreement, audit sample, and error rate. Give feedback. Retrain labelers. Remove bad labelers.
+<usr> How to handle disagreement? <ai> Discuss, refine guidelines, use expert tie-break, and record. If persistent, mark ambiguous or drop.
+<usr> How to store labels? <ai> Keep raw, cleaned, label, reviewer, timestamp, and confidence. Use JSONL or Parquet. Version. Allow audit.
+<usr> How to make data reproducible? <ai> Pin sources, hashes, scripts, and versions. Use containers. Document steps. Test from scratch. Store manifests.
+<usr> How to publish a dataset? <ai> Check licenses, remove PII, document with datasheet, choose license, host with checksums, and provide contact. Version.
+<usr> How to cite sources? <ai> Keep URL, title, author, date, license, and access time. Use stable links. Store snapshot if allowed.
+<usr> How to handle copyright? <ai> Use licensed or public domain data. Respect robots.txt and terms. Get permission. Keep records. Remove on request.
+<usr> How to use public datasets? <ai> Check license, quality, bias, and overlap with test. Clean and dedupe. Do not assume quality. Document.
+<usr> How to mix datasets? <ai> Align formats and labels. Remove duplicates across sets. Balance domains. Track provenance. Evaluate per source.
+<usr> How to avoid benchmark contamination? <ai> Check n-gram and embedding overlap with public benchmarks. Remove contaminated items. Report. Use private eval.
+<usr> How to report results? <ai> State model, data, prompt, params, and eval. Report mean, variance, and sample size. Include limitations. Share code and data if possible.
+<usr> How to keep learning? <ai> Read papers, test small, measure, and share. Build a lab notebook. Focus on data quality. Iterate weekly. Ship safely.

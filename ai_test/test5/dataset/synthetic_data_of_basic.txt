@@ -1,0 +1,806 @@
+<usr> Hello, how are you? <ai> I am doing well, thank you for asking! How can I help you today?
+<usr> What is the square root of 144? <ai> The square root of 144 is 12.
+<usr> Write a Python function to check if a number is even. <ai> def is_even(n): return n % 2 == 0
+<usr> What is the boiling point of water in Celsius? <ai> The boiling point of water is 100 degrees Celsius at standard atmospheric pressure.
+<usr> Name three planets in our solar system. <ai> Three planets in our solar system are Earth, Mars, and Jupiter.
+<usr> How do I print text in C++? <ai> You can print text in C++ using the cout object: #include <iostream> int main() { std::cout << "Hello World"; return 0; }
+<usr> What is the largest mammal in the world? <ai> The largest mammal in the world is the blue whale.
+<usr> Translate the word hello to Spanish. <ai> The word hello in Spanish is hola.
+<usr> What is the formula for the area of a circle? <ai> The formula for the area of a circle is A = pi * r^2, where r is the radius.
+<usr> Give me a simple recipe for pancakes. <ai> Mix 1 cup flour, 1 cup milk, 1 egg, and a pinch of salt. Cook on a hot griddle until bubbles form, then flip.
+<usr> What does HTML stand for? <ai> HTML stands for HyperText Markup Language.
+<usr> How many continents are there on Earth? <ai> There are seven continents on Earth: Africa, Antarctica, Asia, Australia, Europe, North America, and South America.
+<usr> Write a SQL query to select all users from a table named users. <ai> SELECT * FROM users;
+<usr> What is the speed of light in a vacuum? <ai> The speed of light in a vacuum is approximately 299,792,458 meters per second.
+<usr> Who wrote the play Romeo and Juliet? <ai> Romeo and Juliet was written by William Shakespeare.
+<usr> What is the binary representation of the decimal number 5? <ai> The binary representation of the decimal number 5 is 101.
+<usr> Explain what a variable is in programming. <ai> A variable is a named storage location in memory that holds a value, which can be changed during program execution.
+<usr> What is the capital of Japan? <ai> The capital of Japan is Tokyo.
+<usr> How do I create a list in Python? <ai> You can create a list in Python by enclosing comma-separated values in square brackets, like this: my_list = [1, 2, 3]
+<usr> What gas do plants absorb from the atmosphere? <ai> Plants absorb carbon dioxide from the atmosphere.
+<usr> What is the result of 15 divided by 3? <ai> The result of 15 divided by 3 is 5.
+<usr> Name the four basic arithmetic operations. <ai> The four basic arithmetic operations are addition, subtraction, multiplication, and division.
+<usr> Write a regular expression to match an email address. <ai> A simple regex for an email address is: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+<usr> What is the freezing point of water in Fahrenheit? <ai> The freezing point of water is 32 degrees Fahrenheit.
+<usr> How many sides does a hexagon have? <ai> A hexagon has six sides.
+<usr> What is the main function of the heart? <ai> The main function of the heart is to pump blood throughout the body, delivering oxygen and nutrients to tissues.
+<usr> Write a short story about a robot. <ai> The robot woke up and scanned the room. Its mission was clear: find the lost key. After searching for an hour, it beeped happily, holding the shiny object in its metal hand.
+<usr> What is the chemical formula for water? <ai> The chemical formula for water is H2O.
+<usr> How do I comment a single line in Python? <ai> You can comment a single line in Python by starting the line with a hash symbol (#).
+<usr> What is the tallest mountain in the world? <ai> The tallest mountain in the world is Mount Everest.
+<usr> Define the term algorithm. <ai> An algorithm is a step-by-step procedure or formula for solving a problem or completing a task.
+<usr> What color do you get when you mix blue and yellow? <ai> When you mix blue and yellow, you get green.
+<usr> How many hours are in a day? <ai> There are 24 hours in a day.
+<usr> What is the largest ocean on Earth? <ai> The largest ocean on Earth is the Pacific Ocean.
+<usr> Write a Python loop that prints numbers from 1 to 5. <ai> for i in range(1, 6): print(i)
+<usr> What is the currency of the United Kingdom? <ai> The currency of the United Kingdom is the Pound Sterling (GBP).
+<usr> What does CPU stand for? <ai> CPU stands for Central Processing Unit.
+<usr> How do you calculate the perimeter of a rectangle? <ai> The perimeter of a rectangle is calculated as 2 * (length + width).
+<usr> What is the smallest prime number? <ai> The smallest prime number is 2.
+<usr> Name three types of clouds. <ai> Three types of clouds are cumulus, stratus, and cirrus.
+<usr> What is the past tense of the verb go? <ai> The past tense of the verb go is went.
+<usr> How do I concatenate two strings in Python? <ai> You can concatenate two strings in Python using the plus (+) operator, like this: "hello" + " world"
+<usr> What is the capital of Australia? <ai> The capital of Australia is Canberra.
+<usr> What force keeps us on the ground? <ai> Gravity is the force that keeps us on the ground.
+<usr> Write a CSS rule to make text red. <ai> p { color: red; }
+<usr> What is the value of Pi to two decimal places? <ai> The value of Pi to two decimal places is 3.14.
+<usr> How many legs does a spider have? <ai> A spider has eight legs.
+<usr> What is the hardest natural substance on Earth? <ai> The hardest natural substance on Earth is diamond.
+<usr> What does API stand for? <ai> API stands for Application Programming Interface.
+<usr> Give me a synonym for the word happy. <ai> A synonym for the word happy is joyful.
+<usr> What is the capital of Canada? <ai> The capital of Canada is Ottawa.
+<usr> How do I install a package using pip? <ai> You can install a package using pip by running: pip install package_name
+<usr> What is the atomic number of carbon? <ai> The atomic number of carbon is 6.
+<usr> Write a function to return the maximum of two numbers in JavaScript. <ai> function getMax(a, b) { return Math.max(a, b); }
+<usr> What is the longest river in the world? <ai> The Nile is generally considered the longest river in the world, though some argue it is the Amazon.
+<usr> How many bytes are in a kilobyte? <ai> There are 1024 bytes in a kilobyte.
+<usr> What is the opposite of cold? <ai> The opposite of cold is hot.
+<usr> What is the sum of angles in a triangle? <ai> The sum of angles in a triangle is always 180 degrees.
+<usr> Name the first three elements of the periodic table. <ai> The first three elements are Hydrogen, Helium, and Lithium.
+<usr> How do I start a new line in HTML? <ai> You can start a new line in HTML using the <br> tag.
+<usr> What is the primary language spoken in Brazil? <ai> The primary language spoken in Brazil is Portuguese.
+<usr> What is 10 to the power of 3? <ai> 10 to the power of 3 is 1000.
+<usr> Write a Python dictionary with one key-value pair. <ai> my_dict = {"name": "Alice"}
+<usr> What planet is known as the Red Planet? <ai> Mars is known as the Red Planet.
+<usr> How do you spell the number 40? <ai> The number 40 is spelled forty.
+<usr> What is the main ingredient in bread? <ai> The main ingredient in bread is flour.
+<usr> What does HTTP stand for? <ai> HTTP stands for HyperText Transfer Protocol.
+<usr> How many players are on a standard soccer team? <ai> There are 11 players on a standard soccer team.
+<usr> What is the square of 9? <ai> The square of 9 is 81.
+<usr> Name a mammal that lays eggs. <ai> The platypus and the echidna are mammals that lay eggs.
+<usr> How do I declare a variable in Java? <ai> You can declare a variable in Java like this: int myNumber = 10;
+<usr> What is the capital of Italy? <ai> The capital of Italy is Rome.
+<usr> What is the process of water turning into vapor called? <ai> The process of water turning into vapor is called evaporation.
+<usr> Write a bash command to list files in a directory. <ai> The command to list files in a directory is ls.
+<usr> What is the largest desert in the world? <ai> The largest desert in the world is the Antarctic Desert.
+<usr> How many sides does a pentagon have? <ai> A pentagon has five sides.
+<usr> What is the chemical symbol for sodium? <ai> The chemical symbol for sodium is Na.
+<usr> What is the default port for HTTP? <ai> The default port for HTTP is 80.
+<usr> Who painted the Mona Lisa? <ai> The Mona Lisa was painted by Leonardo da Vinci.
+<usr> What is the result of 7 multiplied by 8? <ai> The result of 7 multiplied by 8 is 56.
+<usr> How do I check the current directory in Linux? <ai> You can check the current directory in Linux using the pwd command.
+<usr> What is the smallest country in the world? <ai> The smallest country in the world is Vatican City.
+<usr> What does RAM stand for? <ai> RAM stands for Random Access Memory.
+<usr> Write a SQL command to delete a table. <ai> The SQL command to delete a table is DROP TABLE table_name;
+<usr> What is the speed of sound in air at room temperature? <ai> The speed of sound in air at room temperature is approximately 343 meters per second.
+<usr> How many weeks are in a year? <ai> There are 52 weeks in a year.
+<usr> What is the capital of Germany? <ai> The capital of Germany is Berlin.
+<usr> What is the largest organ in the human body? <ai> The largest organ in the human body is the skin.
+<usr> How do I write a comment in JavaScript? <ai> You can write a single-line comment in JavaScript using two forward slashes (//).
+<usr> What is the freezing point of water in Celsius? <ai> The freezing point of water is 0 degrees Celsius.
+<usr> Name three primary colors of light. <ai> The three primary colors of light are red, green, and blue.
+<usr> What is the binary representation of 10? <ai> The binary representation of 10 is 1010.
+<usr> How do I append an item to a list in Python? <ai> You can append an item to a list in Python using the append() method, like this: my_list.append(item)
+<usr> What is the capital of Spain? <ai> The capital of Spain is Madrid.
+<usr> What gas do humans exhale? <ai> Humans exhale carbon dioxide.
+<usr> What is the formula for calculating speed? <ai> The formula for calculating speed is speed = distance / time.
+<usr> How many keys are on a standard piano? <ai> A standard piano has 88 keys.
+<usr> What is the largest bone in the human body? <ai> The largest bone in the human body is the femur.
+<usr> Write a Python function to return the length of a string. <ai> def get_length(s): return len(s)
+<usr> What is the capital of Egypt? <ai> The capital of Egypt is Cairo.
+<usr> What is the capital of France? <ai> The capital of France is Paris.
+<usr> What is the largest planet in our solar system? <ai> The largest planet in our solar system is Jupiter.
+<usr> How many minutes are in an hour? <ai> There are 60 minutes in an hour.
+<usr> What is the chemical symbol for gold? <ai> The chemical symbol for gold is Au.
+<usr> Write a Python function to add two numbers. <ai> def add(a, b): return a + b
+<usr> What is the capital of Russia? <ai> The capital of Russia is Moscow.
+<usr> What is the square root of 81? <ai> The square root of 81 is 9.
+<usr> How many days are in a leap year? <ai> There are 366 days in a leap year.
+<usr> What does URL stand for? <ai> URL stands for Uniform Resource Locator.
+<usr> What is the largest species of shark? <ai> The largest species of shark is the whale shark.
+<usr> Write a SQL query to count rows in a table named users. <ai> SELECT COUNT(*) FROM users;
+<usr> What is the capital of China? <ai> The capital of China is Beijing.
+<usr> What is the chemical formula for carbon dioxide? <ai> The chemical formula for carbon dioxide is CO2.
+<usr> How many degrees are in a right angle? <ai> A right angle has 90 degrees.
+<usr> What is the past tense of eat? <ai> The past tense of eat is ate.
+<usr> Write a JavaScript function to reverse a string. <ai> function reverseString(s) { return s.split('').reverse().join(''); }
+<usr> What is the largest continent by area? <ai> The largest continent by area is Asia.
+<usr> What is the capital of India? <ai> The capital of India is New Delhi.
+<usr> How many colors are in a rainbow? <ai> There are seven colors in a rainbow.
+<usr> What is the chemical symbol for oxygen? <ai> The chemical symbol for oxygen is O.
+<usr> Write a Python loop that prints even numbers from 2 to 10. <ai> for i in range(2, 11, 2): print(i)
+<usr> What is the capital of Brazil? <ai> The capital of Brazil is Brasilia.
+<usr> What is the largest internal organ in the human body? <ai> The largest internal organ in the human body is the liver.
+<usr> How many sides does an octagon have? <ai> An octagon has eight sides.
+<usr> What is the formula for the circumference of a circle? <ai> The circumference of a circle is C = 2 * pi * r.
+<usr> What does CSS stand for? <ai> CSS stands for Cascading Style Sheets.
+<usr> Write a bash command to change directory. <ai> The command to change directory is cd.
+<usr> What is the capital of Mexico? <ai> The capital of Mexico is Mexico City.
+<usr> What is the boiling point of water in Fahrenheit? <ai> The boiling point of water is 212 degrees Fahrenheit at standard atmospheric pressure.
+<usr> How many bones are in the adult human body? <ai> An adult human body has 206 bones.
+<usr> What is the chemical symbol for iron? <ai> The chemical symbol for iron is Fe.
+<usr> Write a Python function to check if a string is a palindrome. <ai> def is_palindrome(s): return s == s[::-1]
+<usr> What is the capital of South Korea? <ai> The capital of South Korea is Seoul.
+<usr> What is the largest bay in the world? <ai> The largest bay in the world is the Bay of Bengal.
+<usr> How many teeth does an adult human typically have? <ai> An adult human typically has 32 teeth.
+<usr> What is the formula for the volume of a cube? <ai> The volume of a cube is V = side^3.
+<usr> What does JSON stand for? <ai> JSON stands for JavaScript Object Notation.
+<usr> Write a SQL query to select the names of all users older than 18. <ai> SELECT name FROM users WHERE age > 18;
+<usr> What is the capital of Argentina? <ai> The capital of Argentina is Buenos Aires.
+<usr> What is the largest species of cat? <ai> The largest species of cat is the tiger.
+<usr> How many strings does a standard guitar have? <ai> A standard guitar has six strings.
+<usr> What is the chemical symbol for silver? <ai> The chemical symbol for silver is Ag.
+<usr> Write a Python dictionary with two key-value pairs. <ai> my_dict = {"name": "Alice", "age": 30}
+<usr> What is the capital of Turkey? <ai> The capital of Turkey is Ankara.
+<usr> What is the smallest bone in the human body? <ai> The smallest bone in the human body is the stapes.
+<usr> How many players are on a basketball team on the court? <ai> There are five players on a basketball team on the court.
+<usr> What is the formula for the area of a rectangle? <ai> The area of a rectangle is A = length * width.
+<usr> What does FTP stand for? <ai> FTP stands for File Transfer Protocol.
+<usr> Write a JavaScript function to check if a number is positive. <ai> function isPositive(n) { return n > 0; }
+<usr> What is the capital of Greece? <ai> The capital of Greece is Athens.
+<usr> What is the largest bird in the world? <ai> The largest bird in the world is the ostrich.
+<usr> How many chambers does the human heart have? <ai> The human heart has four chambers.
+<usr> What is the chemical symbol for potassium? <ai> The chemical symbol for potassium is K.
+<usr> Write a Python function to find the minimum of a list. <ai> def get_min(lst): return min(lst)
+<usr> What is the capital of Portugal? <ai> The capital of Portugal is Lisbon.
+<usr> What is the process by which plants make food? <ai> The process by which plants make food is photosynthesis.
+<usr> How many strings does a standard violin have? <ai> A standard violin has four strings.
+<usr> What is the formula for the volume of a sphere? <ai> The volume of a sphere is V = (4/3) * pi * r^3.
+<usr> What does SQL stand for? <ai> SQL stands for Structured Query Language.
+<usr> Write a bash command to make a new directory. <ai> The command to make a new directory is mkdir directory_name.
+<usr> What is the capital of Norway? <ai> The capital of Norway is Oslo.
+<usr> What is the largest species of bear? <ai> The largest species of bear is the polar bear.
+<usr> How many pairs of ribs does a human have? <ai> A human has 12 pairs of ribs.
+<usr> What is the chemical symbol for calcium? <ai> The chemical symbol for calcium is Ca.
+<usr> Write a Python function to count vowels in a string. <ai> def count_vowels(s): return sum(1 for c in s.lower() if c in "aeiou")
+<usr> What is the capital of Sweden? <ai> The capital of Sweden is Stockholm.
+<usr> What is the largest island in the world? <ai> The largest island in the world is Greenland.
+<usr> How many sides does a rhombus have? <ai> A rhombus has four sides.
+<usr> What is the formula for simple interest? <ai> Simple interest is I = P * R * T, where P is principal, R is rate, and T is time.
+<usr> What does XML stand for? <ai> XML stands for Extensible Markup Language.
+<usr> Write a SQL query to update a user's email. <ai> UPDATE users SET email = 'new@example.com' WHERE id = 1;
+<usr> What is the capital of Finland? <ai> The capital of Finland is Helsinki.
+<usr> What is the largest species of penguin? <ai> The largest species of penguin is the emperor penguin.
+<usr> How many vertebrae are in the human spine? <ai> The human spine has 33 vertebrae.
+<usr> What is the chemical symbol for nitrogen? <ai> The chemical symbol for nitrogen is N.
+<usr> Write a Python function to convert Celsius to Fahrenheit. <ai> def c_to_f(c): return (c * 9/5) + 32
+<usr> What is the capital of Poland? <ai> The capital of Poland is Warsaw.
+<usr> What is the largest lake in the world by area? <ai> The largest lake in the world by area is the Caspian Sea.
+<usr> How many sides does a trapezoid have? <ai> A trapezoid has four sides.
+<usr> What is the formula for average speed? <ai> Average speed is total distance divided by total time.
+<usr> What does VPN stand for? <ai> VPN stands for Virtual Private Network.
+<usr> Write a JavaScript function to add two numbers. <ai> function add(a, b) { return a + b; }
+<usr> What is the capital of Ireland? <ai> The capital of Ireland is Dublin.
+<usr> What is the largest rodent in the world? <ai> The largest rodent in the world is the capybara.
+<usr> How many chromosomes does a human have? <ai> A human has 46 chromosomes.
+<usr> What is the chemical symbol for hydrogen? <ai> The chemical symbol for hydrogen is H.
+<usr> Write a Python function to check if a number is prime. <ai> def is_prime(n): return n > 1 and all(n % i != 0 for i in range(2, int(n**0.5) + 1))
+<usr> What is the capital of Denmark? <ai> The capital of Denmark is Copenhagen.
+<usr> What is the largest waterfall in the world? <ai> The largest waterfall in the world is Angel Falls.
+<usr> How many sides does a nonagon have? <ai> A nonagon has nine sides.
+<usr> What is the formula for kinetic energy? <ai> Kinetic energy is KE = 0.5 * m * v^2.
+<usr> What does DNS stand for? <ai> DNS stands for Domain Name System.
+<usr> Write a SQL query to insert a new user. <ai> INSERT INTO users (name, email) VALUES ('Alice', 'alice@example.com');
+<usr> What is the capital of Switzerland? <ai> The capital of Switzerland is Bern.
+<usr> What is the largest fish in the world? <ai> The largest fish in the world is the whale shark.
+<usr> How many muscles are in the human body? <ai> The human body has more than 600 muscles.
+<usr> What is the chemical symbol for carbon? <ai> The chemical symbol for carbon is C.
+<usr> Write a Python function to find the factorial of a number. <ai> def factorial(n): return 1 if n == 0 else n * factorial(n - 1)
+<usr> What is the capital of Austria? <ai> The capital of Austria is Vienna.
+<usr> What is the largest mountain range in the world? <ai> The largest mountain range in the world is the Andes.
+<usr> How many sides does a decagon have? <ai> A decagon has ten sides.
+<usr> What is the formula for potential energy? <ai> Potential energy is PE = m * g * h.
+<usr> What does GUI stand for? <ai> GUI stands for Graphical User Interface.
+<usr> Write a bash command to remove a file. <ai> The command to remove a file is rm file_name.
+<usr> What is the capital of Belgium? <ai> The capital of Belgium is Brussels.
+<usr> What is the largest reptile in the world? <ai> The largest reptile in the world is the saltwater crocodile.
+<usr> How many pairs of cranial nerves are there? <ai> There are 12 pairs of cranial nerves.
+<usr> What is the chemical symbol for magnesium? <ai> The chemical symbol for magnesium is Mg.
+<usr> Write a Python function to sort a list. <ai> def sort_list(lst): return sorted(lst)
+<usr> What is the capital of Hungary? <ai> The capital of Hungary is Budapest.
+<usr> What is the largest volcano in the world? <ai> The largest volcano in the world is Mauna Loa.
+<usr> How many sides does a parallelogram have? <ai> A parallelogram has four sides.
+<usr> What is the formula for density? <ai> Density is mass divided by volume, or D = m / V.
+<usr> What does IDE stand for? <ai> IDE stands for Integrated Development Environment.
+<usr> Write a SQL query to delete a user with id 5. <ai> DELETE FROM users WHERE id = 5;
+<usr> What is the capital of Czechia? <ai> The capital of Czechia is Prague.
+<usr> What is the largest amphibian in the world? <ai> The largest amphibian in the world is the Chinese giant salamander.
+<usr> How many valves does the human heart have? <ai> The human heart has four valves.
+<usr> What is the chemical symbol for chlorine? <ai> The chemical symbol for chlorine is Cl.
+<usr> Write a Python function to check if a string contains only digits. <ai> def is_digits(s): return s.isdigit()
+<usr> What is the capital of Romania? <ai> The capital of Romania is Bucharest.
+<usr> What is the largest peninsula in the world? <ai> The largest peninsula in the world is the Arabian Peninsula.
+<usr> How many sides does a heptagon have? <ai> A heptagon has seven sides.
+<usr> What is the formula for power? <ai> Power is work divided by time, or P = W / t.
+<usr> What does LAN stand for? <ai> LAN stands for Local Area Network.
+<usr> Write a JavaScript function to check if a string is empty. <ai> function isEmpty(s) { return s.length === 0; }
+<usr> What is the capital of Ukraine? <ai> The capital of Ukraine is Kyiv.
+<usr> What is the largest canyon in the world? <ai> The largest canyon in the world is the Grand Canyon.
+<usr> How many pairs of spinal nerves are there? <ai> There are 31 pairs of spinal nerves.
+<usr> What is the chemical symbol for phosphorus? <ai> The chemical symbol for phosphorus is P.
+<usr> Write a Python function to remove duplicates from a list. <ai> def remove_duplicates(lst): return list(set(lst))
+<usr> What is the capital of Iceland? <ai> The capital of Iceland is Reykjavik.
+<usr> What is the largest coral reef system in the world? <ai> The largest coral reef system in the world is the Great Barrier Reef.
+<usr> How many sides does a quadrilateral have? <ai> A quadrilateral has four sides.
+<usr> What is the formula for acceleration? <ai> Acceleration is change in velocity divided by time, or a = (v - u) / t.
+<usr> What does WAN stand for? <ai> WAN stands for Wide Area Network.
+<usr> Write a SQL query to create a table named products. <ai> CREATE TABLE products (id INT, name VARCHAR(100), price DECIMAL(10,2));
+<usr> What is the capital of Croatia? <ai> The capital of Croatia is Zagreb.
+<usr> What is the largest species of deer? <ai> The largest species of deer is the moose.
+<usr> How many bones are in the human hand? <ai> The human hand has 27 bones.
+<usr> What is the chemical symbol for zinc? <ai> The chemical symbol for zinc is Zn.
+<usr> Write a Python function to merge two dictionaries. <ai> def merge_dicts(a, b): return {**a, **b}
+<usr> What is the capital of Bulgaria? <ai> The capital of Bulgaria is Sofia.
+<usr> What is the largest plateau in the world? <ai> The largest plateau in the world is the Tibetan Plateau.
+<usr> How many sides does a dodecagon have? <ai> A dodecagon has twelve sides.
+<usr> What is the formula for Ohm's law? <ai> Ohm's law is V = I * R.
+<usr> What does RAM stand for in computing? <ai> RAM stands for Random Access Memory.
+<usr> Write a bash command to display the current date. <ai> The command to display the current date is date.
+<usr> What is the capital of Serbia? <ai> The capital of Serbia is Belgrade.
+<usr> What is the largest species of whale? <ai> The largest species of whale is the blue whale.
+<usr> What is the capital of Albania? <ai> The capital of Albania is Tirana.
+<usr> What is the capital of Algeria? <ai> The capital of Algeria is Algiers.
+<usr> What is the capital of Angola? <ai> The capital of Angola is Luanda.
+<usr> What is the capital of Armenia? <ai> The capital of Armenia is Yerevan.
+<usr> What is the capital of Azerbaijan? <ai> The capital of Azerbaijan is Baku.
+<usr> What is the capital of Bahrain? <ai> The capital of Bahrain is Manama.
+<usr> What is the capital of Bangladesh? <ai> The capital of Bangladesh is Dhaka.
+<usr> What is the capital of Belarus? <ai> The capital of Belarus is Minsk.
+<usr> What is the capital of Bolivia? <ai> The capital of Bolivia is Sucre.
+<usr> What is the capital of Bosnia and Herzegovina? <ai> The capital of Bosnia and Herzegovina is Sarajevo.
+<usr> What is the capital of Cambodia? <ai> The capital of Cambodia is Phnom Penh.
+<usr> What is the capital of Cameroon? <ai> The capital of Cameroon is Yaounde.
+<usr> What is the capital of Chile? <ai> The capital of Chile is Santiago.
+<usr> What is the capital of Colombia? <ai> The capital of Colombia is Bogota.
+<usr> What is the capital of Costa Rica? <ai> The capital of Costa Rica is San Jose.
+<usr> What is the capital of Cuba? <ai> The capital of Cuba is Havana.
+<usr> What is the capital of Cyprus? <ai> The capital of Cyprus is Nicosia.
+<usr> What is the capital of Ecuador? <ai> The capital of Ecuador is Quito.
+<usr> What is the capital of Estonia? <ai> The capital of Estonia is Tallinn.
+<usr> What is the capital of Ethiopia? <ai> The capital of Ethiopia is Addis Ababa.
+<usr> What is the capital of Georgia? <ai> The capital of Georgia is Tbilisi.
+<usr> What is the capital of Ghana? <ai> The capital of Ghana is Accra.
+<usr> What is the capital of Guatemala? <ai> The capital of Guatemala is Guatemala City.
+<usr> What is the capital of Honduras? <ai> The capital of Honduras is Tegucigalpa.
+<usr> What is the capital of Indonesia? <ai> The capital of Indonesia is Jakarta.
+<usr> What is the capital of Iran? <ai> The capital of Iran is Tehran.
+<usr> What is the capital of Iraq? <ai> The capital of Iraq is Baghdad.
+<usr> What is the capital of Israel? <ai> The capital of Israel is Jerusalem.
+<usr> What is the capital of Jamaica? <ai> The capital of Jamaica is Kingston.
+<usr> What is the capital of Jordan? <ai> The capital of Jordan is Amman.
+<usr> What is the capital of Kazakhstan? <ai> The capital of Kazakhstan is Astana.
+<usr> What is the capital of Kenya? <ai> The capital of Kenya is Nairobi.
+<usr> What is the capital of Kuwait? <ai> The capital of Kuwait is Kuwait City.
+<usr> What is the capital of Latvia? <ai> The capital of Latvia is Riga.
+<usr> What is the capital of Lebanon? <ai> The capital of Lebanon is Beirut.
+<usr> What is the capital of Libya? <ai> The capital of Libya is Tripoli.
+<usr> What is the capital of Lithuania? <ai> The capital of Lithuania is Vilnius.
+<usr> What is the capital of Luxembourg? <ai> The capital of Luxembourg is Luxembourg.
+<usr> What is the capital of Madagascar? <ai> The capital of Madagascar is Antananarivo.
+<usr> What is the capital of Malaysia? <ai> The capital of Malaysia is Kuala Lumpur.
+<usr> What is the capital of Malta? <ai> The capital of Malta is Valletta.
+<usr> What is the capital of Monaco? <ai> The capital of Monaco is Monaco.
+<usr> What is the capital of Mongolia? <ai> The capital of Mongolia is Ulaanbaatar.
+<usr> What is the capital of Montenegro? <ai> The capital of Montenegro is Podgorica.
+<usr> What is the capital of Morocco? <ai> The capital of Morocco is Rabat.
+<usr> What is the capital of Nepal? <ai> The capital of Nepal is Kathmandu.
+<usr> What is the capital of New Zealand? <ai> The capital of New Zealand is Wellington.
+<usr> What is the capital of Nigeria? <ai> The capital of Nigeria is Abuja.
+<usr> What is the capital of North Korea? <ai> The capital of North Korea is Pyongyang.
+<usr> What is the capital of Oman? <ai> The capital of Oman is Muscat.
+<usr> What is the capital of Pakistan? <ai> The capital of Pakistan is Islamabad.
+<usr> What is the capital of Panama? <ai> The capital of Panama is Panama City.
+<usr> What is the capital of Paraguay? <ai> The capital of Paraguay is Asuncion.
+<usr> What is the capital of Peru? <ai> The capital of Peru is Lima.
+<usr> What is the capital of the Philippines? <ai> The capital of the Philippines is Manila.
+<usr> What is the capital of Qatar? <ai> The capital of Qatar is Doha.
+<usr> What is the capital of Saudi Arabia? <ai> The capital of Saudi Arabia is Riyadh.
+<usr> What is the capital of Senegal? <ai> The capital of Senegal is Dakar.
+<usr> What is the capital of Singapore? <ai> The capital of Singapore is Singapore.
+<usr> What is the capital of Slovakia? <ai> The capital of Slovakia is Bratislava.
+<usr> What is the capital of Slovenia? <ai> The capital of Slovenia is Ljubljana.
+<usr> What is the capital of South Africa? <ai> South Africa has three capitals: Pretoria, Cape Town, and Bloemfontein.
+<usr> What is the capital of Sri Lanka? <ai> The capital of Sri Lanka is Sri Jayawardenepura Kotte.
+<usr> What is the capital of Syria? <ai> The capital of Syria is Damascus.
+<usr> What is the capital of Thailand? <ai> The capital of Thailand is Bangkok.
+<usr> What is the capital of Tunisia? <ai> The capital of Tunisia is Tunis.
+<usr> What is the capital of the United Arab Emirates? <ai> The capital of the United Arab Emirates is Abu Dhabi.
+<usr> What is the capital of Uruguay? <ai> The capital of Uruguay is Montevideo.
+<usr> What is the capital of Uzbekistan? <ai> The capital of Uzbekistan is Tashkent.
+<usr> What is the capital of Venezuela? <ai> The capital of Venezuela is Caracas.
+<usr> What is the capital of Vietnam? <ai> The capital of Vietnam is Hanoi.
+<usr> What is the capital of Yemen? <ai> The capital of Yemen is Sanaa.
+<usr> What is the capital of Zambia? <ai> The capital of Zambia is Lusaka.
+<usr> What is the capital of Zimbabwe? <ai> The capital of Zimbabwe is Harare.
+<usr> What is the square root of 169? <ai> The square root of 169 is 13.
+<usr> What is the square root of 196? <ai> The square root of 196 is 14.
+<usr> What is the square root of 225? <ai> The square root of 225 is 15.
+<usr> What is 12 multiplied by 12? <ai> 12 multiplied by 12 is 144.
+<usr> What is 13 multiplied by 13? <ai> 13 multiplied by 13 is 169.
+<usr> What is 14 multiplied by 14? <ai> 14 multiplied by 14 is 196.
+<usr> What is 15 multiplied by 15? <ai> 15 multiplied by 15 is 225.
+<usr> What is 100 divided by 4? <ai> 100 divided by 4 is 25.
+<usr> What is 100 divided by 5? <ai> 100 divided by 5 is 20.
+<usr> What is 100 divided by 10? <ai> 100 divided by 10 is 10.
+<usr> What is 7 plus 8? <ai> 7 plus 8 is 15.
+<usr> What is 9 plus 10? <ai> 9 plus 10 is 19.
+<usr> What is 20 minus 7? <ai> 20 minus 7 is 13.
+<usr> What is 50 minus 25? <ai> 50 minus 25 is 25.
+<usr> What is 6 times 9? <ai> 6 times 9 is 54.
+<usr> What is 8 times 7? <ai> 8 times 7 is 56.
+<usr> What is 9 times 9? <ai> 9 times 9 is 81.
+<usr> Write a Python function to subtract two numbers. <ai> def subtract(a, b): return a - b
+<usr> Write a Python function to multiply two numbers. <ai> def multiply(a, b): return a * b
+<usr> Write a Python function to divide two numbers. <ai> def divide(a, b): return a / b
+<usr> Write a Python function to return the square of a number. <ai> def square(n): return n * n
+<usr> Write a Python function to return the cube of a number. <ai> def cube(n): return n * n * n
+<usr> Write a Python function to check if a number is negative. <ai> def is_negative(n): return n < 0
+<usr> Write a Python function to check if a number is zero. <ai> def is_zero(n): return n == 0
+<usr> Write a Python function to return the absolute value of a number. <ai> def absolute(n): return abs(n)
+<usr> Write a Python function to return the larger of two numbers. <ai> def max_of_two(a, b): return a if a > b else b
+<usr> Write a Python function to return the smaller of two numbers. <ai> def min_of_two(a, b): return a if a < b else b
+<usr> Write a JavaScript function to subtract two numbers. <ai> function subtract(a, b) { return a - b; }
+<usr> Write a JavaScript function to multiply two numbers. <ai> function multiply(a, b) { return a * b; }
+<usr> Write a JavaScript function to divide two numbers. <ai> function divide(a, b) { return a / b; }
+<usr> Write a JavaScript function to check if a number is even. <ai> function isEven(n) { return n % 2 === 0; }
+<usr> Write a JavaScript function to check if a number is odd. <ai> function isOdd(n) { return n % 2 !== 0; }
+<usr> Write a SQL query to select all columns from a table named products. <ai> SELECT * FROM products;
+<usr> Write a SQL query to select the name and price from products. <ai> SELECT name, price FROM products;
+<usr> Write a SQL query to select products with price greater than 100. <ai> SELECT * FROM products WHERE price > 100;
+<usr> Write a SQL query to select products ordered by price. <ai> SELECT * FROM products ORDER BY price;
+<usr> Write a SQL query to select the average price from products. <ai> SELECT AVG(price) FROM products;
+<usr> What does CPU stand for? <ai> CPU stands for Central Processing Unit.
+<usr> What does GPU stand for? <ai> GPU stands for Graphics Processing Unit.
+<usr> What does SSD stand for? <ai> SSD stands for Solid State Drive.
+<usr> What does HDD stand for? <ai> HDD stands for Hard Disk Drive.
+<usr> What does USB stand for? <ai> USB stands for Universal Serial Bus.
+<usr> What does HDMI stand for? <ai> HDMI stands for High Definition Multimedia Interface.
+<usr> What does BIOS stand for? <ai> BIOS stands for Basic Input Output System.
+<usr> What does OS stand for? <ai> OS stands for Operating System.
+<usr> What does IP stand for? <ai> IP stands for Internet Protocol.
+<usr> What does TCP stand for? <ai> TCP stands for Transmission Control Protocol.
+<usr> What does UDP stand for? <ai> UDP stands for User Datagram Protocol.
+<usr> What does HTTP stand for? <ai> HTTP stands for HyperText Transfer Protocol.
+<usr> What does HTTPS stand for? <ai> HTTPS stands for HyperText Transfer Protocol Secure.
+<usr> What does FTP stand for? <ai> FTP stands for File Transfer Protocol.
+<usr> What does SMTP stand for? <ai> SMTP stands for Simple Mail Transfer Protocol.
+<usr> What does DNS stand for? <ai> DNS stands for Domain Name System.
+<usr> What does DHCP stand for? <ai> DHCP stands for Dynamic Host Configuration Protocol.
+<usr> What does VPN stand for? <ai> VPN stands for Virtual Private Network.
+<usr> What does API stand for? <ai> API stands for Application Programming Interface.
+<usr> What does SDK stand for? <ai> SDK stands for Software Development Kit.
+<usr> What does IDE stand for? <ai> IDE stands for Integrated Development Environment.
+<usr> What does GUI stand for? <ai> GUI stands for Graphical User Interface.
+<usr> What does CLI stand for? <ai> CLI stands for Command Line Interface.
+<usr> What does JSON stand for? <ai> JSON stands for JavaScript Object Notation.
+<usr> What does XML stand for? <ai> XML stands for Extensible Markup Language.
+<usr> What does HTML stand for? <ai> HTML stands for HyperText Markup Language.
+<usr> What does CSS stand for? <ai> CSS stands for Cascading Style Sheets.
+<usr> What does SQL stand for? <ai> SQL stands for Structured Query Language.
+<usr> What does RAM stand for? <ai> RAM stands for Random Access Memory.
+<usr> What does ROM stand for? <ai> ROM stands for Read Only Memory.
+<usr> What does LAN stand for? <ai> LAN stands for Local Area Network.
+<usr> What does WAN stand for? <ai> WAN stands for Wide Area Network.
+<usr> What does URL stand for? <ai> URL stands for Uniform Resource Locator.
+<usr> What does URI stand for? <ai> URI stands for Uniform Resource Identifier.
+<usr> What does ASCII stand for? <ai> ASCII stands for American Standard Code for Information Interchange.
+<usr> What does UTF stand for? <ai> UTF stands for Unicode Transformation Format.
+<usr> What does PDF stand for? <ai> PDF stands for Portable Document Format.
+<usr> What does ZIP stand for? <ai> ZIP is a file format for compressed archives.
+<usr> What does PNG stand for? <ai> PNG stands for Portable Network Graphics.
+<usr> What does JPEG stand for? <ai> JPEG stands for Joint Photographic Experts Group.
+<usr> What does GIF stand for? <ai> GIF stands for Graphics Interchange Format.
+<usr> What is the capital of Afghanistan? <ai> The capital of Afghanistan is Kabul.
+<usr> What is the capital of Bahamas? <ai> The capital of Bahamas is Nassau.
+<usr> What is the capital of Barbados? <ai> The capital of Barbados is Bridgetown.
+<usr> What is the capital of Belize? <ai> The capital of Belize is Belmopan.
+<usr> What is the capital of Benin? <ai> The capital of Benin is Porto-Novo.
+<usr> What is the capital of Bhutan? <ai> The capital of Bhutan is Thimphu.
+<usr> What is the capital of Botswana? <ai> The capital of Botswana is Gaborone.
+<usr> What is the capital of Brunei? <ai> The capital of Brunei is Bandar Seri Begawan.
+<usr> What is the capital of Burkina Faso? <ai> The capital of Burkina Faso is Ouagadougou.
+<usr> What is the capital of Burundi? <ai> The capital of Burundi is Gitega.
+<usr> What is the capital of Cape Verde? <ai> The capital of Cape Verde is Praia.
+<usr> What is the capital of Central African Republic? <ai> The capital of Central African Republic is Bangui.
+<usr> What is the capital of Chad? <ai> The capital of Chad is N'Djamena.
+<usr> What is the capital of Comoros? <ai> The capital of Comoros is Moroni.
+<usr> What is the capital of Congo? <ai> The capital of Congo is Brazzaville.
+<usr> What is the capital of Democratic Republic of the Congo? <ai> The capital of Democratic Republic of the Congo is Kinshasa.
+<usr> What is the capital of Djibouti? <ai> The capital of Djibouti is Djibouti.
+<usr> What is the capital of Dominica? <ai> The capital of Dominica is Roseau.
+<usr> What is the capital of Dominican Republic? <ai> The capital of Dominican Republic is Santo Domingo.
+<usr> What is the capital of El Salvador? <ai> The capital of El Salvador is San Salvador.
+<usr> What is the capital of Equatorial Guinea? <ai> The capital of Equatorial Guinea is Malabo.
+<usr> What is the capital of Eritrea? <ai> The capital of Eritrea is Asmara.
+<usr> What is the capital of Eswatini? <ai> The capital of Eswatini is Mbabane.
+<usr> What is the capital of Fiji? <ai> The capital of Fiji is Suva.
+<usr> What is the capital of Gabon? <ai> The capital of Gabon is Libreville.
+<usr> What is the capital of Gambia? <ai> The capital of Gambia is Banjul.
+<usr> What is the capital of Grenada? <ai> The capital of Grenada is St. George's.
+<usr> What is the capital of Guinea? <ai> The capital of Guinea is Conakry.
+<usr> What is the capital of Guinea-Bissau? <ai> The capital of Guinea-Bissau is Bissau.
+<usr> What is the capital of Guyana? <ai> The capital of Guyana is Georgetown.
+<usr> What is the capital of Haiti? <ai> The capital of Haiti is Port-au-Prince.
+<usr> What is the capital of Kiribati? <ai> The capital of Kiribati is Tarawa.
+<usr> What is the capital of Kosovo? <ai> The capital of Kosovo is Pristina.
+<usr> What is the capital of Kyrgyzstan? <ai> The capital of Kyrgyzstan is Bishkek.
+<usr> What is the capital of Laos? <ai> The capital of Laos is Vientiane.
+<usr> What is the capital of Lesotho? <ai> The capital of Lesotho is Maseru.
+<usr> What is the capital of Liberia? <ai> The capital of Liberia is Monrovia.
+<usr> What is the capital of Liechtenstein? <ai> The capital of Liechtenstein is Vaduz.
+<usr> What is the capital of Malawi? <ai> The capital of Malawi is Lilongwe.
+<usr> What is the capital of Maldives? <ai> The capital of Maldives is Male.
+<usr> What is the capital of Mali? <ai> The capital of Mali is Bamako.
+<usr> What is the capital of Marshall Islands? <ai> The capital of Marshall Islands is Majuro.
+<usr> What is the capital of Mauritania? <ai> The capital of Mauritania is Nouakchott.
+<usr> What is the capital of Mauritius? <ai> The capital of Mauritius is Port Louis.
+<usr> What is the capital of Micronesia? <ai> The capital of Micronesia is Palikir.
+<usr> What is the capital of Moldova? <ai> The capital of Moldova is Chisinau.
+<usr> What is the capital of Mozambique? <ai> The capital of Mozambique is Maputo.
+<usr> What is the capital of Myanmar? <ai> The capital of Myanmar is Naypyidaw.
+<usr> What is the capital of Namibia? <ai> The capital of Namibia is Windhoek.
+<usr> What is the capital of Nauru? <ai> The capital of Nauru is Yaren.
+<usr> What is the capital of Nicaragua? <ai> The capital of Nicaragua is Managua.
+<usr> What is the capital of Niger? <ai> The capital of Niger is Niamey.
+<usr> What is the capital of North Macedonia? <ai> The capital of North Macedonia is Skopje.
+<usr> What is the capital of Palau? <ai> The capital of Palau is Ngerulmud.
+<usr> What is the capital of Papua New Guinea? <ai> The capital of Papua New Guinea is Port Moresby.
+<usr> What is the capital of Rwanda? <ai> The capital of Rwanda is Kigali.
+<usr> What is the capital of Saint Kitts and Nevis? <ai> The capital of Saint Kitts and Nevis is Basseterre.
+<usr> What is the capital of Saint Lucia? <ai> The capital of Saint Lucia is Castries.
+<usr> What is the capital of Saint Vincent and the Grenadines? <ai> The capital of Saint Vincent and the Grenadines is Kingstown.
+<usr> What is the capital of Samoa? <ai> The capital of Samoa is Apia.
+<usr> What is the capital of San Marino? <ai> The capital of San Marino is San Marino.
+<usr> What is the capital of Sao Tome and Principe? <ai> The capital of Sao Tome and Principe is Sao Tome.
+<usr> What is the capital of Seychelles? <ai> The capital of Seychelles is Victoria.
+<usr> What is the capital of Sierra Leone? <ai> The capital of Sierra Leone is Freetown.
+<usr> What is the capital of Solomon Islands? <ai> The capital of Solomon Islands is Honiara.
+<usr> What is the capital of Somalia? <ai> The capital of Somalia is Mogadishu.
+<usr> What is the capital of South Sudan? <ai> The capital of South Sudan is Juba.
+<usr> What is the capital of Sudan? <ai> The capital of Sudan is Khartoum.
+<usr> What is the capital of Suriname? <ai> The capital of Suriname is Paramaribo.
+<usr> What is the capital of Tajikistan? <ai> The capital of Tajikistan is Dushanbe.
+<usr> What is the capital of Tanzania? <ai> The capital of Tanzania is Dodoma.
+<usr> What is the capital of Timor-Leste? <ai> The capital of Timor-Leste is Dili.
+<usr> What is the capital of Togo? <ai> The capital of Togo is Lome.
+<usr> What is the capital of Tonga? <ai> The capital of Tonga is Nuku'alofa.
+<usr> What is the capital of Trinidad and Tobago? <ai> The capital of Trinidad and Tobago is Port of Spain.
+<usr> What is the capital of Turkmenistan? <ai> The capital of Turkmenistan is Ashgabat.
+<usr> What is the capital of Tuvalu? <ai> The capital of Tuvalu is Funafuti.
+<usr> What is the capital of Uganda? <ai> The capital of Uganda is Kampala.
+<usr> What is the capital of Vanuatu? <ai> The capital of Vanuatu is Port Vila.
+<usr> What is the capital of Vatican City? <ai> The capital of Vatican City is Vatican City.
+<usr> What is the capital of Western Sahara? <ai> The capital of Western Sahara is El Aaiun.
+<usr> What is 2 plus 2? <ai> 2 plus 2 is 4.
+<usr> What is 3 plus 5? <ai> 3 plus 5 is 8.
+<usr> What is 10 minus 4? <ai> 10 minus 4 is 6.
+<usr> What is 6 times 6? <ai> 6 times 6 is 36.
+<usr> What is 8 divided by 2? <ai> 8 divided by 2 is 4.
+<usr> What is 9 divided by 3? <ai> 9 divided by 3 is 3.
+<usr> What is 12 plus 8? <ai> 12 plus 8 is 20.
+<usr> What is 15 minus 9? <ai> 15 minus 9 is 6.
+<usr> What is 7 times 3? <ai> 7 times 3 is 21.
+<usr> What is 14 divided by 7? <ai> 14 divided by 7 is 2.
+<usr> What is the square root of 25? <ai> The square root of 25 is 5.
+<usr> What is the square root of 36? <ai> The square root of 36 is 6.
+<usr> What is the square root of 49? <ai> The square root of 49 is 7.
+<usr> What is the square root of 64? <ai> The square root of 64 is 8.
+<usr> What is the square root of 100? <ai> The square root of 100 is 10.
+<usr> What is 2 to the power of 5? <ai> 2 to the power of 5 is 32.
+<usr> What is 3 to the power of 3? <ai> 3 to the power of 3 is 27.
+<usr> What is 4 to the power of 2? <ai> 4 to the power of 2 is 16.
+<usr> What is 5 to the power of 0? <ai> 5 to the power of 0 is 1.
+<usr> What is the value of Pi to three decimal places? <ai> The value of Pi to three decimal places is 3.142.
+<usr> What is the value of e to two decimal places? <ai> The value of e to two decimal places is 2.72.
+<usr> What is the chemical symbol for helium? <ai> The chemical symbol for helium is He.
+<usr> What is the chemical symbol for lithium? <ai> The chemical symbol for lithium is Li.
+<usr> What is the chemical symbol for beryllium? <ai> The chemical symbol for beryllium is Be.
+<usr> What is the chemical symbol for boron? <ai> The chemical symbol for boron is B.
+<usr> What is the chemical symbol for neon? <ai> The chemical symbol for neon is Ne.
+<usr> What is the chemical symbol for sodium? <ai> The chemical symbol for sodium is Na.
+<usr> What is the chemical symbol for aluminum? <ai> The chemical symbol for aluminum is Al.
+<usr> What is the chemical symbol for silicon? <ai> The chemical symbol for silicon is Si.
+<usr> What is the chemical symbol for sulfur? <ai> The chemical symbol for sulfur is S.
+<usr> What is the chemical symbol for argon? <ai> The chemical symbol for argon is Ar.
+<usr> What is the chemical symbol for potassium? <ai> The chemical symbol for potassium is K.
+<usr> What is the chemical symbol for calcium? <ai> The chemical symbol for calcium is Ca.
+<usr> What is the chemical symbol for titanium? <ai> The chemical symbol for titanium is Ti.
+<usr> What is the chemical symbol for chromium? <ai> The chemical symbol for chromium is Cr.
+<usr> What is the chemical symbol for manganese? <ai> The chemical symbol for manganese is Mn.
+<usr> What is the chemical symbol for cobalt? <ai> The chemical symbol for cobalt is Co.
+<usr> What is the chemical symbol for nickel? <ai> The chemical symbol for nickel is Ni.
+<usr> What is the chemical symbol for copper? <ai> The chemical symbol for copper is Cu.
+<usr> What is the chemical symbol for zinc? <ai> The chemical symbol for zinc is Zn.
+<usr> What is the chemical symbol for bromine? <ai> The chemical symbol for bromine is Br.
+<usr> What is the chemical symbol for krypton? <ai> The chemical symbol for krypton is Kr.
+<usr> What is the chemical symbol for rubidium? <ai> The chemical symbol for rubidium is Rb.
+<usr> What is the chemical symbol for strontium? <ai> The chemical symbol for strontium is Sr.
+<usr> What is the chemical symbol for yttrium? <ai> The chemical symbol for yttrium is Y.
+<usr> What is the chemical symbol for zirconium? <ai> The chemical symbol for zirconium is Zr.
+<usr> What is the chemical symbol for niobium? <ai> The chemical symbol for niobium is Nb.
+<usr> What is the chemical symbol for molybdenum? <ai> The chemical symbol for molybdenum is Mo.
+<usr> What is the chemical symbol for technetium? <ai> The chemical symbol for technetium is Tc.
+<usr> What is the chemical symbol for ruthenium? <ai> The chemical symbol for ruthenium is Ru.
+<usr> What is the chemical symbol for rhodium? <ai> The chemical symbol for rhodium is Rh.
+<usr> What is the chemical symbol for palladium? <ai> The chemical symbol for palladium is Pd.
+<usr> What is the chemical symbol for silver? <ai> The chemical symbol for silver is Ag.
+<usr> What is the chemical symbol for cadmium? <ai> The chemical symbol for cadmium is Cd.
+<usr> What is the chemical symbol for indium? <ai> The chemical symbol for indium is In.
+<usr> What is the chemical symbol for tin? <ai> The chemical symbol for tin is Sn.
+<usr> What is the chemical symbol for antimony? <ai> The chemical symbol for antimony is Sb.
+<usr> What is the chemical symbol for tellurium? <ai> The chemical symbol for tellurium is Te.
+<usr> What is the chemical symbol for iodine? <ai> The chemical symbol for iodine is I.
+<usr> What is the chemical symbol for xenon? <ai> The chemical symbol for xenon is Xe.
+<usr> What is the chemical symbol for cesium? <ai> The chemical symbol for cesium is Cs.
+<usr> What is the chemical symbol for barium? <ai> The chemical symbol for barium is Ba.
+<usr> What is the chemical symbol for lanthanum? <ai> The chemical symbol for lanthanum is La.
+<usr> What is the chemical symbol for cerium? <ai> The chemical symbol for cerium is Ce.
+<usr> What is the chemical symbol for praseodymium? <ai> The chemical symbol for praseodymium is Pr.
+<usr> What is the chemical symbol for neodymium? <ai> The chemical symbol for neodymium is Nd.
+<usr> What is the chemical symbol for promethium? <ai> The chemical symbol for promethium is Pm.
+<usr> What is the chemical symbol for samarium? <ai> The chemical symbol for samarium is Sm.
+<usr> What is the chemical symbol for europium? <ai> The chemical symbol for europium is Eu.
+<usr> What is the chemical symbol for gadolinium? <ai> The chemical symbol for gadolinium is Gd.
+<usr> What is the chemical symbol for terbium? <ai> The chemical symbol for terbium is Tb.
+<usr> What is the chemical symbol for dysprosium? <ai> The chemical symbol for dysprosium is Dy.
+<usr> What is the chemical symbol for holmium? <ai> The chemical symbol for holmium is Ho.
+<usr> What is the chemical symbol for erbium? <ai> The chemical symbol for erbium is Er.
+<usr> What is the chemical symbol for thulium? <ai> The chemical symbol for thulium is Tm.
+<usr> What is the chemical symbol for ytterbium? <ai> The chemical symbol for ytterbium is Yb.
+<usr> What is the chemical symbol for lutetium? <ai> The chemical symbol for lutetium is Lu.
+<usr> What is the chemical symbol for hafnium? <ai> The chemical symbol for hafnium is Hf.
+<usr> What is the chemical symbol for tantalum? <ai> The chemical symbol for tantalum is Ta.
+<usr> What is the chemical symbol for tungsten? <ai> The chemical symbol for tungsten is W.
+<usr> What is the chemical symbol for rhenium? <ai> The chemical symbol for rhenium is Re.
+<usr> What is the chemical symbol for osmium? <ai> The chemical symbol for osmium is Os.
+<usr> What is the chemical symbol for iridium? <ai> The chemical symbol for iridium is Ir.
+<usr> What is the chemical symbol for platinum? <ai> The chemical symbol for platinum is Pt.
+<usr> What is the chemical symbol for gold? <ai> The chemical symbol for gold is Au.
+<usr> What is the chemical symbol for mercury? <ai> The chemical symbol for mercury is Hg.
+<usr> What is the chemical symbol for thallium? <ai> The chemical symbol for thallium is Tl.
+<usr> What is the chemical symbol for lead? <ai> The chemical symbol for lead is Pb.
+<usr> What is the chemical symbol for bismuth? <ai> The chemical symbol for bismuth is Bi.
+<usr> What is the chemical symbol for polonium? <ai> The chemical symbol for polonium is Po.
+<usr> What is the chemical symbol for astatine? <ai> The chemical symbol for astatine is At.
+<usr> What is the chemical symbol for radon? <ai> The chemical symbol for radon is Rn.
+<usr> What is the chemical symbol for francium? <ai> The chemical symbol for francium is Fr.
+<usr> What is the chemical symbol for radium? <ai> The chemical symbol for radium is Ra.
+<usr> What is the chemical symbol for actinium? <ai> The chemical symbol for actinium is Ac.
+<usr> What is the chemical symbol for thorium? <ai> The chemical symbol for thorium is Th.
+<usr> What is the chemical symbol for protactinium? <ai> The chemical symbol for protactinium is Pa.
+<usr> What is the chemical symbol for uranium? <ai> The chemical symbol for uranium is U.
+<usr> What is the chemical symbol for neptunium? <ai> The chemical symbol for neptunium is Np.
+<usr> What is the chemical symbol for plutonium? <ai> The chemical symbol for plutonium is Pu.
+<usr> What is the chemical symbol for americium? <ai> The chemical symbol for americium is Am.
+<usr> What is the chemical symbol for curium? <ai> The chemical symbol for curium is Cm.
+<usr> What is the chemical symbol for berkelium? <ai> The chemical symbol for berkelium is Bk.
+<usr> What is the chemical symbol for californium? <ai> The chemical symbol for californium is Cf.
+<usr> What is the chemical symbol for einsteinium? <ai> The chemical symbol for einsteinium is Es.
+<usr> What is the chemical symbol for fermium? <ai> The chemical symbol for fermium is Fm.
+<usr> What is the chemical symbol for mendelevium? <ai> The chemical symbol for mendelevium is Md.
+<usr> What is the chemical symbol for nobelium? <ai> The chemical symbol for nobelium is No.
+<usr> What is the chemical symbol for lawrencium? <ai> The chemical symbol for lawrencium is Lr.
+<usr> What is the chemical symbol for rutherfordium? <ai> The chemical symbol for rutherfordium is Rf.
+<usr> What is the chemical symbol for dubnium? <ai> The chemical symbol for dubnium is Db.
+<usr> What is the chemical symbol for seaborgium? <ai> The chemical symbol for seaborgium is Sg.
+<usr> What is the chemical symbol for bohrium? <ai> The chemical symbol for bohrium is Bh.
+<usr> What is the chemical symbol for hassium? <ai> The chemical symbol for hassium is Hs.
+<usr> What is the chemical symbol for meitnerium? <ai> The chemical symbol for meitnerium is Mt.
+<usr> What is the chemical symbol for darmstadtium? <ai> The chemical symbol for darmstadtium is Ds.
+<usr> What is the chemical symbol for roentgenium? <ai> The chemical symbol for roentgenium is Rg.
+<usr> What is the chemical symbol for copernicium? <ai> The chemical symbol for copernicium is Cn.
+<usr> What is the chemical symbol for nihonium? <ai> The chemical symbol for nihonium is Nh.
+<usr> What is the chemical symbol for flerovium? <ai> The chemical symbol for flerovium is Fl.
+<usr> What is the chemical symbol for moscovium? <ai> The chemical symbol for moscovium is Mc.
+<usr> What is the chemical symbol for livermorium? <ai> The chemical symbol for livermorium is Lv.
+<usr> What is the chemical symbol for tennessine? <ai> The chemical symbol for tennessine is Ts.
+<usr> What is the chemical symbol for oganesson? <ai> The chemical symbol for oganesson is Og.
+<usr> What is the capital of the United States? <ai> The capital of the United States is Washington, D.C.
+<usr> What is the capital of Canada? <ai> The capital of Canada is Ottawa.
+<usr> What is the capital of Mexico? <ai> The capital of Mexico is Mexico City.
+<usr> What is the capital of Brazil? <ai> The capital of Brazil is Brasilia.
+<usr> What is the capital of Argentina? <ai> The capital of Argentina is Buenos Aires.
+<usr> What is the capital of Chile? <ai> The capital of Chile is Santiago.
+<usr> What is the capital of Peru? <ai> The capital of Peru is Lima.
+<usr> What is the capital of Colombia? <ai> The capital of Colombia is Bogota.
+<usr> What is the capital of Venezuela? <ai> The capital of Venezuela is Caracas.
+<usr> What is the capital of Ecuador? <ai> The capital of Ecuador is Quito.
+<usr> What is the capital of Bolivia? <ai> The capital of Bolivia is Sucre.
+<usr> What is the capital of Paraguay? <ai> The capital of Paraguay is Asuncion.
+<usr> What is the capital of Uruguay? <ai> The capital of Uruguay is Montevideo.
+<usr> What is the capital of Guyana? <ai> The capital of Guyana is Georgetown.
+<usr> What is the capital of Suriname? <ai> The capital of Suriname is Paramaribo.
+<usr> What is the capital of France? <ai> The capital of France is Paris.
+<usr> What is the capital of Germany? <ai> The capital of Germany is Berlin.
+<usr> What is the capital of Italy? <ai> The capital of Italy is Rome.
+<usr> What is the capital of Spain? <ai> The capital of Spain is Madrid.
+<usr> What is the capital of Portugal? <ai> The capital of Portugal is Lisbon.
+<usr> What is the capital of United Kingdom? <ai> The capital of the United Kingdom is London.
+<usr> What is the capital of Ireland? <ai> The capital of Ireland is Dublin.
+<usr> What is the capital of Netherlands? <ai> The capital of the Netherlands is Amsterdam.
+<usr> What is the capital of Belgium? <ai> The capital of Belgium is Brussels.
+<usr> What is the capital of Luxembourg? <ai> The capital of Luxembourg is Luxembourg.
+<usr> What is the capital of Switzerland? <ai> The capital of Switzerland is Bern.
+<usr> What is the capital of Austria? <ai> The capital of Austria is Vienna.
+<usr> What is the capital of Poland? <ai> The capital of Poland is Warsaw.
+<usr> What is the capital of Czechia? <ai> The capital of Czechia is Prague.
+<usr> What is the capital of Slovakia? <ai> The capital of Slovakia is Bratislava.
+<usr> What is the capital of Hungary? <ai> The capital of Hungary is Budapest.
+<usr> What is the capital of Romania? <ai> The capital of Romania is Bucharest.
+<usr> What is the capital of Bulgaria? <ai> The capital of Bulgaria is Sofia.
+<usr> What is the capital of Greece? <ai> The capital of Greece is Athens.
+<usr> What is the capital of Turkey? <ai> The capital of Turkey is Ankara.
+<usr> What is the capital of Russia? <ai> The capital of Russia is Moscow.
+<usr> What is the capital of Ukraine? <ai> The capital of Ukraine is Kyiv.
+<usr> What is the capital of Belarus? <ai> The capital of Belarus is Minsk.
+<usr> What is the capital of Lithuania? <ai> The capital of Lithuania is Vilnius.
+<usr> What is the capital of Latvia? <ai> The capital of Latvia is Riga.
+<usr> What is the capital of Estonia? <ai> The capital of Estonia is Tallinn.
+<usr> What is the capital of Finland? <ai> The capital of Finland is Helsinki.
+<usr> What is the capital of Sweden? <ai> The capital of Sweden is Stockholm.
+<usr> What is the capital of Norway? <ai> The capital of Norway is Oslo.
+<usr> What is the capital of Denmark? <ai> The capital of Denmark is Copenhagen.
+<usr> What is the capital of Iceland? <ai> The capital of Iceland is Reykjavik.
+<usr> What is the capital of China? <ai> The capital of China is Beijing.
+<usr> What is the capital of Japan? <ai> The capital of Japan is Tokyo.
+<usr> What is the capital of South Korea? <ai> The capital of South Korea is Seoul.
+<usr> What is the capital of North Korea? <ai> The capital of North Korea is Pyongyang.
+<usr> What is the capital of India? <ai> The capital of India is New Delhi.
+<usr> What is the capital of Pakistan? <ai> The capital of Pakistan is Islamabad.
+<usr> What is the capital of Bangladesh? <ai> The capital of Bangladesh is Dhaka.
+<usr> What is the capital of Nepal? <ai> The capital of Nepal is Kathmandu.
+<usr> What is the capital of Bhutan? <ai> The capital of Bhutan is Thimphu.
+<usr> What is the capital of Sri Lanka? <ai> The capital of Sri Lanka is Sri Jayawardenepura Kotte.
+<usr> What is the capital of Myanmar? <ai> The capital of Myanmar is Naypyidaw.
+<usr> What is the capital of Thailand? <ai> The capital of Thailand is Bangkok.
+<usr> What is the capital of Vietnam? <ai> The capital of Vietnam is Hanoi.
+<usr> What is the capital of Cambodia? <ai> The capital of Cambodia is Phnom Penh.
+<usr> What is the capital of Laos? <ai> The capital of Laos is Vientiane.
+<usr> What is the capital of Malaysia? <ai> The capital of Malaysia is Kuala Lumpur.
+<usr> What is the capital of Singapore? <ai> The capital of Singapore is Singapore.
+<usr> What is the capital of Indonesia? <ai> The capital of Indonesia is Jakarta.
+<usr> What is the capital of Philippines? <ai> The capital of the Philippines is Manila.
+<usr> What is the capital of Australia? <ai> The capital of Australia is Canberra.
+<usr> What is the capital of New Zealand? <ai> The capital of New Zealand is Wellington.
+<usr> What is the capital of Egypt? <ai> The capital of Egypt is Cairo.
+<usr> What is the capital of South Africa? <ai> South Africa has three capitals: Pretoria, Cape Town, and Bloemfontein.
+<usr> What is the capital of Nigeria? <ai> The capital of Nigeria is Abuja.
+<usr> What is the capital of Kenya? <ai> The capital of Kenya is Nairobi.
+<usr> What is the capital of Ethiopia? <ai> The capital of Ethiopia is Addis Ababa.
+<usr> What is the capital of Ghana? <ai> The capital of Ghana is Accra.
+<usr> What is the capital of Morocco? <ai> The capital of Morocco is Rabat.
+<usr> What is the capital of Algeria? <ai> The capital of Algeria is Algiers.
+<usr> What is the capital of Tunisia? <ai> The capital of Tunisia is Tunis.
+<usr> What is the capital of Libya? <ai> The capital of Libya is Tripoli.
+<usr> What is the capital of Sudan? <ai> The capital of Sudan is Khartoum.
+<usr> What is the capital of South Sudan? <ai> The capital of South Sudan is Juba.
+<usr> What is the capital of Somalia? <ai> The capital of Somalia is Mogadishu.
+<usr> What is the capital of Senegal? <ai> The capital of Senegal is Dakar.
+<usr> What is the capital of Mali? <ai> The capital of Mali is Bamako.
+<usr> What is the capital of Niger? <ai> The capital of Niger is Niamey.
+<usr> What is the capital of Chad? <ai> The capital of Chad is N'Djamena.
+<usr> What is the capital of Cameroon? <ai> The capital of Cameroon is Yaounde.
+<usr> What is the capital of Ivory Coast? <ai> The capital of Ivory Coast is Yamoussoukro.
+<usr> What is the capital of Burkina Faso? <ai> The capital of Burkina Faso is Ouagadougou.
+<usr> What is the capital of Benin? <ai> The capital of Benin is Porto-Novo.
+<usr> What is the capital of Togo? <ai> The capital of Togo is Lome.
+<usr> What is the capital of Liberia? <ai> The capital of Liberia is Monrovia.
+<usr> What is the capital of Sierra Leone? <ai> The capital of Sierra Leone is Freetown.
+<usr> What is the capital of Guinea? <ai> The capital of Guinea is Conakry.
+<usr> What is the capital of Gambia? <ai> The capital of Gambia is Banjul.
+<usr> What is the capital of Mauritania? <ai> The capital of Mauritania is Nouakchott.
+<usr> What is the capital of Western Sahara? <ai> The capital of Western Sahara is El Aaiun.
+<usr> What is the capital of Cape Verde? <ai> The capital of Cape Verde is Praia.
+<usr> What is the capital of Sao Tome and Principe? <ai> The capital of Sao Tome and Principe is Sao Tome.
+<usr> What is the capital of Equatorial Guinea? <ai> The capital of Equatorial Guinea is Malabo.
+<usr> What is the capital of Gabon? <ai> The capital of Gabon is Libreville.
+<usr> What is the capital of Congo? <ai> The capital of Congo is Brazzaville.
+<usr> What is the capital of Democratic Republic of the Congo? <ai> The capital of the Democratic Republic of the Congo is Kinshasa.
+<usr> What is the capital of Central African Republic? <ai> The capital of the Central African Republic is Bangui.
+<usr> What is the capital of Angola? <ai> The capital of Angola is Luanda.
+<usr> What is the capital of Zambia? <ai> The capital of Zambia is Lusaka.
+<usr> What is the capital of Zimbabwe? <ai> The capital of Zimbabwe is Harare.
+<usr> What is the capital of Malawi? <ai> The capital of Malawi is Lilongwe.
+<usr> What is the capital of Mozambique? <ai> The capital of Mozambique is Maputo.
+<usr> What is the capital of Tanzania? <ai> The capital of Tanzania is Dodoma.
+<usr> What is the capital of Rwanda? <ai> The capital of Rwanda is Kigali.
+<usr> What is the capital of Burundi? <ai> The capital of Burundi is Gitega.
+<usr> What is the capital of Uganda? <ai> The capital of Uganda is Kampala.
+<usr> What is the capital of Madagascar? <ai> The capital of Madagascar is Antananarivo.
+<usr> What is the capital of Mauritius? <ai> The capital of Mauritius is Port Louis.
+<usr> What is the capital of Seychelles? <ai> The capital of Seychelles is Victoria.
+<usr> What is the capital of Comoros? <ai> The capital of Comoros is Moroni.
+<usr> What is the capital of Maldives? <ai> The capital of Maldives is Male.
+<usr> What is the capital of Afghanistan? <ai> The capital of Afghanistan is Kabul.
+<usr> What is the capital of Iran? <ai> The capital of Iran is Tehran.
+<usr> What is the capital of Iraq? <ai> The capital of Iraq is Baghdad.
+<usr> What is the capital of Syria? <ai> The capital of Syria is Damascus.
+<usr> What is the capital of Lebanon? <ai> The capital of Lebanon is Beirut.
+<usr> What is the capital of Jordan? <ai> The capital of Jordan is Amman.
+<usr> What is the capital of Israel? <ai> The capital of Israel is Jerusalem.
+<usr> What is the capital of Saudi Arabia? <ai> The capital of Saudi Arabia is Riyadh.
+<usr> What is the capital of Yemen? <ai> The capital of Yemen is Sanaa.
+<usr> What is the capital of Oman? <ai> The capital of Oman is Muscat.
+<usr> What is the capital of United Arab Emirates? <ai> The capital of the United Arab Emirates is Abu Dhabi.
+<usr> What is the capital of Qatar? <ai> The capital of Qatar is Doha.
+<usr> What is the capital of Bahrain? <ai> The capital of Bahrain is Manama.
+<usr> What is the capital of Kuwait? <ai> The capital of Kuwait is Kuwait City.
+<usr> What is the capital of Kazakhstan? <ai> The capital of Kazakhstan is Astana.
+<usr> What is the capital of Uzbekistan? <ai> The capital of Uzbekistan is Tashkent.
+<usr> What is the capital of Turkmenistan? <ai> The capital of Turkmenistan is Ashgabat.
+<usr> What is the capital of Kyrgyzstan? <ai> The capital of Kyrgyzstan is Bishkek.
+<usr> What is the capital of Tajikistan? <ai> The capital of Tajikistan is Dushanbe.
+<usr> What is the capital of Azerbaijan? <ai> The capital of Azerbaijan is Baku.
+<usr> What is the capital of Armenia? <ai> The capital of Armenia is Yerevan.
+<usr> What is the capital of Georgia? <ai> The capital of Georgia is Tbilisi.
+<usr> What is the capital of Mongolia? <ai> The capital of Mongolia is Ulaanbaatar.
+<usr> What is the capital of Nepal? <ai> The capital of Nepal is Kathmandu.
+<usr> What is the capital of Bhutan? <ai> The capital of Bhutan is Thimphu.
+<usr> What is the capital of Bangladesh? <ai> The capital of Bangladesh is Dhaka.
+<usr> What is the capital of Sri Lanka? <ai> The capital of Sri Lanka is Sri Jayawardenepura Kotte.
+<usr> What is the capital of Myanmar? <ai> The capital of Myanmar is Naypyidaw.
+<usr> What is the capital of Thailand? <ai> The capital of Thailand is Bangkok.
+<usr> What is the capital of Vietnam? <ai> The capital of Vietnam is Hanoi.
+<usr> What is the capital of Cambodia? <ai> The capital of Cambodia is Phnom Penh.
+<usr> What is the capital of Laos? <ai> The capital of Laos is Vientiane.
+<usr> What is the capital of Malaysia? <ai> The capital of Malaysia is Kuala Lumpur.
+<usr> What is the capital of Singapore? <ai> The capital of Singapore is Singapore.
+<usr> What is the capital of Indonesia? <ai> The capital of Indonesia is Jakarta.
+<usr> What is the capital of Philippines? <ai> The capital of the Philippines is Manila.
+<usr> What is the capital of Brunei? <ai> The capital of Brunei is Bandar Seri Begawan.
+<usr> What is the capital of Timor-Leste? <ai> The capital of Timor-Leste is Dili.
+<usr> What is the capital of Papua New Guinea? <ai> The capital of Papua New Guinea is Port Moresby.
+<usr> What is the capital of Solomon Islands? <ai> The capital of Solomon Islands is Honiara.
+<usr> What is the capital of Vanuatu? <ai> The capital of Vanuatu is Port Vila.
+<usr> What is the capital of Fiji? <ai> The capital of Fiji is Suva.
+<usr> What is the capital of Samoa? <ai> The capital of Samoa is Apia.
+<usr> What is the capital of Tonga? <ai> The capital of Tonga is Nuku'alofa.
+<usr> What is the capital of Tuvalu? <ai> The capital of Tuvalu is Funafuti.
+<usr> What is the capital of Kiribati? <ai> The capital of Kiribati is Tarawa.
+<usr> What is the capital of Nauru? <ai> The capital of Nauru is Yaren.
+<usr> What is the capital of Marshall Islands? <ai> The capital of Marshall Islands is Majuro.
+<usr> What is the capital of Micronesia? <ai> The capital of Micronesia is Palikir.
+<usr> What is the capital of Palau? <ai> The capital of Palau is Ngerulmud.
+<usr> What is the capital of Cuba? <ai> The capital of Cuba is Havana.
+<usr> What is the capital of Jamaica? <ai> The capital of Jamaica is Kingston.
+<usr> What is the capital of Haiti? <ai> The capital of Haiti is Port-au-Prince.
+<usr> What is the capital of Dominican Republic? <ai> The capital of the Dominican Republic is Santo Domingo.
+<usr> What is the capital of Bahamas? <ai> The capital of the Bahamas is Nassau.
+<usr> What is the capital of Barbados? <ai> The capital of Barbados is Bridgetown.
+<usr> What is the capital of Trinidad and Tobago? <ai> The capital of Trinidad and Tobago is Port of Spain.
+<usr> What is the capital of Grenada? <ai> The capital of Grenada is St. George's.
+<usr> What is the capital of Saint Lucia? <ai> The capital of Saint Lucia is Castries.
+<usr> What is the capital of Saint Vincent and the Grenadines? <ai> The capital of Saint Vincent and the Grenadines is Kingstown.
+<usr> What is the capital of Saint Kitts and Nevis? <ai> The capital of Saint Kitts and Nevis is Basseterre.
+<usr> What is the capital of Antigua and Barbuda? <ai> The capital of Antigua and Barbuda is St. John's.
+<usr> What is the capital of Dominica? <ai> The capital of Dominica is Roseau.
+<usr> What is the capital of Belize? <ai> The capital of Belize is Belmopan.
+<usr> What is the capital of Guatemala? <ai> The capital of Guatemala is Guatemala City.
+<usr> What is the capital of Honduras? <ai> The capital of Honduras is Tegucigalpa.
+<usr> What is the capital of El Salvador? <ai> The capital of El Salvador is San Salvador.
+<usr> What is the capital of Nicaragua? <ai> The capital of Nicaragua is Managua.
+<usr> What is the capital of Costa Rica? <ai> The capital of Costa Rica is San Jose.
+<usr> What is the capital of Panama? <ai> The capital of Panama is Panama City.
+<usr> What is the capital of Colombia? <ai> The capital of Colombia is Bogota.
+<usr> What is the capital of Venezuela? <ai> The capital of Venezuela is Caracas.
+<usr> What is the capital of Ecuador? <ai> The capital of Ecuador is Quito.
+<usr> What is the capital of Peru? <ai> The capital of Peru is Lima.
+<usr> What is the capital of Bolivia? <ai> The capital of Bolivia is Sucre.
+<usr> What is the capital of Chile? <ai> The capital of Chile is Santiago.
+<usr> What is the capital of Argentina? <ai> The capital of Argentina is Buenos Aires.
+<usr> What is the capital of Uruguay? <ai> The capital of Uruguay is Montevideo.
+<usr> What is the capital of Paraguay? <ai> The capital of Paraguay is Asuncion.
+<usr> What is the capital of Brazil? <ai> The capital of Brazil is Brasilia.
+<usr> What is the capital of Guyana? <ai> The capital of Guyana is Georgetown.
+<usr> What is the capital of Suriname? <ai> The capital of Suriname is Paramaribo.
+<usr> What is the capital of France? <ai> The capital of France is Paris.

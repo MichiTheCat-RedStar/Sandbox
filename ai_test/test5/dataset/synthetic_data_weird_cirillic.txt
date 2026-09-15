@@ -1,0 +1,50 @@
+<usr> Kak zavarit' chaj? <ai> Chtoby zavarit' chaj, nado nalit' goryachuyu vodu v chajnik s listovym chaem i nastojat' neskol'ko minut.
+<usr> Kak ispech' bliny? <ai> Chtoby ispech' bliny, nado prigotovit' testo iz muki, moloka i jajc, a zatem zharit' ego na skovorode.
+<usr> Kak vyuchit' anglijskij jazyk? <ai> Chtoby vyuchit' anglijskij jazyk, nado reguljarno zanimat'sya, slushat' podkasty i praktikovat' razgovornuyu rech'.
+<usr> Kak sdelat' rezervnuyu kopiyu dannyh? <ai> Chtoby sdelat' rezervnuyu kopiyu dannyh, nado skopirovat' vazhnye fajly na vneshnij zhestkij disk ili v oblachnoe hranilishhe.
+<usr> Kak pomyt' okna? <ai> Chtoby pomyt' okna, nado ispol'zovat' special'noe sredstvo dlya stekol i suhuyu tryapku ili skrebok.
+<usr> Kak zavesti koshku? <ai> Chtoby zavesti koshku, nado podgotovit' mesto dlya sna, kupit' korm i lotok, a takzhe najti veterinara.
+<usr> Kak nauchit'sya plavat'? <ai> Chtoby nauchit'sya plavat', nado najti bassejn s trenerom i reguljarno vypolnyat' uprazhneniya v vode.
+<usr> Kak sdelat' kofe? <ai> Chtoby sdelat' kofe, nado smolot' zerna, zalit' ih goryachej vodoj v turke ili kofemashine.
+<usr> Kak vybrat' noutbuk? <ai> Chtoby vybrat' noutbuk, nado opredelit' celi ispol'zovaniya, proverit' harakteristiki i pochitat' otzyvy.
+<usr> Kak napisat' prostuyu programmu? <ai> Chtoby napisat' prostuyu programmu, nado vyuchit' osnovy yazyka programmirovaniya i napisat' kod v redaktore.
+<usr> Kak sdelat' domashnee zadanie? <ai> Chtoby sdelat' domashnee zadanie, nado vnimatel'no prochitat' uslovie, najti nuzhnuyu informaciyu i vypolnit' uprazhneniya.
+<usr> Kak pochinit' kran? <ai> Chtoby pochinit' kran, nado perekryt' vodu, razobrat' smesitel' i zamenit' iznoshennuyu prokladku.
+<usr> Kak vyvesti pyatno s odezhdy? <ai> Chtoby vyvesti pyatno s odezhdy, nado nanesti pyatnovyvoditel' na zagryaznenie i postirat' veshh' v mashinke.
+<usr> Kak sdelat' fotografiyu? <ai> Chtoby sdelat' fotografiyu, nado vzyat' kameru, nastroit' fokus i osveshhenie, a zatem nazhat' knopku spuska.
+<usr> Kak nauchit'sya risovat'? <ai> Chtoby nauchit'sya risovat', nado vzyat' bumagu i karandash, nachat' s prostyh form i reguljarno praktikovat'sya.
+<usr> Kak sdelat' uborku v komnate? <ai> Chtoby sdelat' uborku v komnate, nado ubrat' veshhi na mesta, proteret' pyl' i pomyt' pol.
+<usr> Kak prigotovit' omlet? <ai> Chtoby prigotovit' omlet, nado vzbit' yajca s molokom, vylit' smes' na skovorodu i zharit' do gotovnosti.
+<usr> Kak vyuchit' stihotvorenie? <ai> Chtoby vyuchit' stihotvorenie, nado prochitat' ego neskol'ko raz, razdelit' na chasti i povtoryat' vsluh.
+<usr> Kak sdelat' prezentaciyu? <ai> Chtoby sdelat' prezentaciyu, nado opredelit' temu, sozdat' slajdy s tekstom i kartinkami i potrenirovat'sya vystupat'.
+<usr> Kak najti rabotu? <ai> Chtoby najti rabotu, nado sostavit' rezjume, otpravit' ego na vakansii i podgotovit'sya k sobesedovaniyu.
+<usr> Kak sostavit' byudzhet? <ai> Chtoby sostavit' byudzhet, nado zapisyvat' vse dohody i rashody, a zatem opredelit' stat'i ekonomii.
+<usr> Kak nauchit'sya ezdit' na velosipede? <ai> Chtoby nauchit'sya ezdit' na velosipede, nado najti rovnuyu ploshhadku, sderzhivat' ravnovesie i krutit' pedali.
+<usr> Kak sdelat' kompost? <ai> Chtoby sdelat' kompost, nado sobrat' organicheskie othody v special'nyj yashhik i reguljarno perevorachivat' ih.
+<usr> Kak vybrat' podarok? <ai> Chtoby vybrat' podarok, nado uznat' uvlecheniya cheloveka, opredelit' byudzhet i najti podhodyashhij variant.
+<usr> Kak sdelat' samomassazh? <ai> Chtoby sdelat' samomassazh, nado nanesti maslo na kozhu i myagkimi dvizheniyami razminat' myshtsy.
+<usr> Kak nauchit'sya pet'? <ai> Chtoby nauchit'sya pet', nado delat' dyhatel'nye uprazhneniya, slushat' horoshih ispolnitelej i zanimat'sya s pedagogom.
+<usr> Kak sdelat' svechu svoimi rukami? <ai> Chtoby sdelat' svechu svoimi rukami, nado rastopit' vosk, dobavit' fitil' v formu i zalit' zhidkij vosk.
+<usr> Kak vyvesti komara iz komnaty? <ai> Chtoby vyvesti komara iz komnaty, nado otkryt' okno, vklyuchit' svet snaruzhi ili ispol'zovat' special'nye sredstva.
+<usr> Kak nachat' zakalivanie? <ai> Chtoby nachat' zakalivanie, nado postepenno snizhat' temperaturu vody pri dushe i reguljarno povtoryat' proceduru.
+<usr> Kak nauchit'sya meditirovat'? <ai> Chtoby nauchit'sya meditirovat', nado najti tihoe mesto, sest' udobno, zakryt' glaza i sosredotochit'sya na dyhanii.
+<usr> Kak nauchit'sya bystro pechatat'? <ai> Chtoby nauchit'sya bystro pechatat', nado ispol'zovat' special'nye trenazhery i reguljarno praktikovat'sya kazhdyj den'.
+<usr> Kak sdelat' kofe v turke? <ai> Chtoby sdelat' kofe v turke, nado nasypat' molotyj kofe, zalit' holodnoj vodoj i nagrevat' do poyavleniya peny.
+<usr> Kak vybrat' arbuz? <ai> Chtoby vybrat' arbuz, nado posmotret' na zheltoe pyatno, proverit' zvuk pri stuke i ocenit' ego razmer.
+<usr> Kak sdelat' domashnij hleb? <ai> Chtoby sdelat' domashnij hleb, nado zamesit' testo iz muki, vody i drozhzhej, dat' emu podnyat'sya i ispech' v duhovke.
+<usr> Kak nauchit'sya igrat' na gitare? <ai> Chtoby nauchit'sya igrat' na gitare, nado vyuchit' osnovnye akkordy, nastroit' instrument i reguljarno trenirovat'sya.
+<usr> Kak sdelat' zakaz v internete? <ai> Chtoby sdelat' zakaz v internete, nado vybrat' tovar, dobavit' ego v korzinu, ukazat' adres dostavki i oplatit' pokupku.
+<usr> Kak pochinit' razorvannye provoda? <ai> Chtoby pochinit' razorvannye provoda, nado ochistit' koncy, skrutit' ih vmeste i izolirovat' izolentoj.
+<usr> Kak vyrastit' cvety? <ai> Chtoby vyrastit' cvety, nado posadit' semena v grunt, reguljarno polivat' ih i obespechit' dostatochno solnechnogo sveta.
+<usr> Kak sdelat' kofejnyj napitok? <ai> Chtoby sdelat' kofejnyj napitok, nado smeshat' espresso s molokom i dobavit' sirop po vkusu.
+<usr> Kak nauchit'sya snimat' video? <ai> Chtoby nauchit'sya snimat' video, nado izuchit' osnovy kompozicii, nastroit' kameru i montirovat' snyatye materialy.
+<usr> Kak sdelat' uborku na kuhne? <ai> Chtoby sdelat' uborku na kuhne, nado pomyt' posudu, proteret' stol i ochistit' plitu ot zhira.
+<usr> Kak vyuchit' tablicu umnozheniya? <ai> Chtoby vyuchit' tablicu umnozheniya, nado reguljarno povtoryat' ee vsluh i reshat' prostye primery.
+<usr> Kak sdelat' domashnij jogurt? <ai> Chtoby sdelat' domashnij jogurt, nado nagret' moloko, dobavit' zakvasku i ostavit' v teplom meste na neskol'ko chasov.
+<usr> Kak nastroit' Wi-Fi router? <ai> Chtoby nastroit' Wi-Fi router, nado podklyuchit' ego k pitaniyu, vvesti IP-adres v brauzere i sledovat' instrukciyam.
+<usr> Kak sdelat' kofejnyj skrab dlya tela? <ai> Chtoby sdelat' kofejnyj skrab dlya tela, nado smeshat' molotyj kofe s kokosovym maslom i saharom.
+<usr> Kak nauchit'sya delat' origami? <ai> Chtoby nauchit'sya delat' origami, nado vzyat' kvadratnyj list bumagi i sledovat' shemam skladyvaniya.
+<usr> Kak sdelat' kofe bez kofemashiny? <ai> Chtoby sdelat' kofe bez kofemashiny, nado zalit' molotyj kofe goryachej vodoj vo french-press i nastoyat'.
+<usr> Kak vybrat' pravil'nyj razmer obuvi? <ai> Chtoby vybrat' pravil'nyj razmer obuvi, nado izmerit' dlinu stopy vecherom i sravnit' s tablicej razmerov.
+<usr> Kak sdelat' domashnij limonad? <ai> Chtoby sdelat' domashnij limonad, nado vyzhat' sok iz limonov, dobavit' vodu i sahar po vkusu.
+<usr> Kak nauchit'sya delat' kofe-latte? <ai> Chtoby nauchit'sya delat' kofe-latte, nado prigotovit' espresso, vspenit' moloko i akkuratno vlit' ego v chashku.
