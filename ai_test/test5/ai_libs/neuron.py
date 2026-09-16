@@ -25,6 +25,14 @@ class Neuron:
 		self.B += self.LR * error
 	
 	
+	def DeTrain(self, question:float, wrong:float):
+		'Размытие' # НЕ является способом показать нейрону "как не надо"
+		
+		error = correct - self.Predict(question)
+		self.W -= self.LR * error * question
+		self.B -= self.LR * error
+	
+	
 	def __str__(self):
 		'Узнать актуальный вес и смещение'
 		

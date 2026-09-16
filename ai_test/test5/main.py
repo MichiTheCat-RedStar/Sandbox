@@ -4,7 +4,7 @@
 from string import printable
 from pprint import pprint
 
-from ai_libs import neuron
+from ai_libs import Neuron
 
 
 def ReadData(file_name:str) -> list:
@@ -35,4 +35,46 @@ def BuildVocab(text:str):
 
 # TEST
 if __name__ == '__main__':
-	...
+	data = ReadData('dataset/synthetic_data_universal_1_creative.txt')
+	pprint(data)
+	print()
+	char_data = BuildVocab(printable)
+	pprint(char_data)
+	
+	n = Neuron(lr=0.001)
+	
+	dataset = []
+	for block in data:
+		user, ai = [], []
+		for c in block[0]:
+			user.append(str(char_data[0].get(c, c)))
+		for c in block[1]:
+			ai.append(str(char_data[0].get(c, c)))
+		dataset.append((int(''.join(user)), int(''.join(ai))))
+	
+	pprint(dataset)
+	
+	
+	#n.Educate(dataset, 100000, True)
+	n.Educate(dataset, 100, True)
+	
+	print('Обучено:')
+	while True:
+		user = input('\nТы: ')
+		
+		# Перевожу как с dataset значения в числа
+		user_int = []
+		for c in user:
+			user_int.append(str(char_data[0].get(c, c)))
+		user = int(''.join(user_int))
+		
+		ai = str(n.Predict(user))
+		
+		ai_buffer = []
+		for c in ai: # ????????
+			ai_buffer.append(str(char_data[0].get(c, c)))
+		ai = ''.join(ai_buffer)
+		
+		print('ИИ: ', end='', flush=True)
+		for num in ai:
+			print(char_data[0][num], end='', flush=True)
