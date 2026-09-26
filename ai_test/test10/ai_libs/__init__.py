@@ -8,3 +8,6 @@ from .models.linear import Neuron, VectorNeuron, Layer
 # data
 from .data.reader import ReadData
 from .data.vocab import BuildVocab
+
+# io
+from .io.saves import SaveW, LoadW

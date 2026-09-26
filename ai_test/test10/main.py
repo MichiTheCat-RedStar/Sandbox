@@ -6,11 +6,6 @@ print('Тестирую нейросети и работу с ними...\n')
 
 
 # Импорт модулей
-print('Попытка импорта pprint...', end='', flush=True)
-try: from pprint import pprint
-except ModuleNotFoundError: print('\b'*3, '[Неудачно!]\n'); raise
-else: print('\b'*3, '[Успешно.]')
-
 print('Попытка импорта ai_libs...', end='', flush=True)
 try: from ai_libs import *
 except ModuleNotFoundError: print('\b'*3, '[Неудачно!]\n'); raise
@@ -19,22 +14,29 @@ else: print('\b'*3, '[Успешно.]')
 
 # Точка входа
 if __name__ == '__main__':
-	print('\nМатериал обучения:')
-	data = ReadData('num-bool_alg_IsEven.jsonl')
-	pprint(data)
+	print('\nСоздание слоя и выведение весов:')
 	
-	print('\nСоздание векторного нейрона:')
-	n = Neuron()
-	print('Нейрон создан:', n)
+	n = Layer(2, 2)
 	
-	print('\nОбучения на данных:')
-	n.Educate(data)
-	print('Обучен!')
+	n.Educate([
+		([0, 0], [0, 0]),
+		([2, 3], [5, -1]),
+		([5, 2], [7, 3]),
+		([-2, 1], [-1, -3]),
+		([-1, -3], [-4, 2]),
+	], 100) # 100 вполне достаточно, даже 50 поколений
 	
-	# Опять я забыл, что это линейная функция и она не счиатет как 0, 1, 0, 1...
-	print('\nТеперь он должен определять, чётное число или нет:')
-	while True:
-		try: user = float(input('Ты> '))
-		except: continue
-		
-		print('Чётно' if (n.Predict(user) >= 0.5) else 'Нечётно')
+	for ni, neu in enumerate(n.Neurons):
+		for wi, w in enumerate(neu.W):
+			print(f'Нейрон {ni}, вес {wi}: {w:.2f}')
+	
+	
+	print('\nНа основе этих весов предугадываю:')
+	for a in range(1, 12):
+		for b in range(1, 12):
+			answer = n.Predict([a, b])
+			print(f'{a}+{b} = {answer[0]:.1f}; {a}-{b} = {answer[1]:.1f}', end=' | ')
+	
+	# Выше был тест потыкать все эти имена.атрибуты и прочее, теперь
+	# я на основе этого смогу сделать нормальный модуль saves.py
+	

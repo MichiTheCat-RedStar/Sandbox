@@ -87,14 +87,14 @@ class VectorNeuron:
 		for step in range(1, steps+1):
 			for x, y in data:
 				self.Train(x, y)
-			if (step % 100 == 0) and output:
+			if (step % 1000 == 0) and output:
 				print(f'Шаг: {step}, {self}')
 
 
 
 class Layer:
-	def __init__(self, inputs:int, outputs:int, lr:float=0.01):
-		'Уонструктор слоя: линейный векторный вход и векторный выход'
+	def __init__(self, inputs:int=5, outputs:int=5, lr:float=0.01):
+		'Конструктор слоя: линейный векторный вход и векторный выход'
 		
 		self.Neurons = [VectorNeuron(inputs, lr) for _ in range(outputs)]
 		self.LR = lr
@@ -128,5 +128,5 @@ class Layer:
 		for step in range(1, steps+1):
 			for x, y in data:
 				self.Train(x, y)
-			if output and (step % 100 == 0):
+			if output and (step % 1000 == 0):
 				print(f'Шаг: {step}, {self}')
