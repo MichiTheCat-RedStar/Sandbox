@@ -51,8 +51,6 @@ while True:
 				elif chunk.message.content:
 					print(Style.RESET_ALL+chunk.message.content, end='', flush=True)
 			print('\nОтвечал:', round((time()-start), 2), 'секуд')
-			
-			if chunk.done: stats = chunk
 		
 		case 'quit':
 			client = Client(host=f'http://{input("Укажите IP: ").strip()}:{input("Укажите порт: ").strip()}')
@@ -68,21 +66,24 @@ while True:
 			print('\nCtrl+C для выхода')
 			while True:
 				try:
-					user = input('\nВведите запрос: ').strip()
+					user = input(Style.RESET_ALL+'\nВведите запрос: ').strip()
 				except KeyboardInterrupt:
 					break
 				try:
 					local_history.append({'role': 'user', 'content': user})
+					ai_str = ''
 					
-					print('\nДумаю...', end='', flush=True)
+					print('\nДумаю...')
 					start = time()
+					for chunk in client.chat(model=model, messages=local_history, stream=True):
+						if chunk.message.thinking:
+							print(Fore.LIGHTBLACK_EX+chunk.message.thinking, end='', flush=True)
+						elif chunk.message.content:
+							print(Style.RESET_ALL+chunk.message.content, end='', flush=True)
+							ai_str += chunk.message.content
+					print('\nОтвечал:', round((time()-start), 2), 'секуд')
 					
-					response = client.chat(model=model, messages=local_history)
-					
-					print('\r'+response.message.content)
-					print('Думал:', round((time()-start), 2), 'секуд')
-					
-					local_history.append({'role': 'user', 'content': response.message.content})
+					local_history.append({'role': 'assistant', 'content': ai_str})
 				except KeyboardInterrupt:
 					continue
 		
