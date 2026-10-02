@@ -61,7 +61,7 @@ def Generate(question:str, model_name:str, history:list[dict]=[], silent:bool=Fa
 		result += content
 	
 	if chunk.get('done'):
-		if not silent: print('\nДумал:', chunk.total_duration*0.000000001, 'секунд.')
+		if not silent: print('\nДумал:', round(chunk.total_duration*0.000000001, 2), 'секунд.')
 		history.append({'role': 'assistant', 'content': result})
 	
 	return result
@@ -71,13 +71,13 @@ def Generate(question:str, model_name:str, history:list[dict]=[], silent:bool=Fa
 if __name__ == '__main__':
 	history = []
 	
-	models = []
+	models = [] # TODO: если не подходит, то включать режим "Только текст"
 	print('\nВот список ваших моделей:')
 	for obj in ollama_list().models:
 		model = obj.model
 		models.append(model)
 		print('[Подходит]   ' if _HaveTools(model) else '[Не подходит]', model)
-	model = input('\nВведите имя модели: ')
+	model = input('\nВведите имя модели: ').strip()
 	if not (model in models):
 		raise ValueError('Нет такой модели!')
 	
@@ -101,9 +101,11 @@ if __name__ == '__main__':
 				print('\nВыберите модель:')
 				for m in models:
 					print(m)
-				model = input('\nВведите имя модели: ')
+				user = input('\nВведите имя модели: ').strip()
 				if not (model in models):
-					raise ValueError('Нет такой модели!')
+					print('\nТакой модели нет, используется прошлая!')
+				else:
+					model - user
 			
 			case 'save':
 				HistorySave(history)
