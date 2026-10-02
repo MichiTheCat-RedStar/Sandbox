@@ -13,11 +13,6 @@ try: from ollama import chat, show, list as ollama_list
 except ModuleNotFoundError: print('\b'*3, '[Неудачно!]\n'); raise
 else: print('\b'*3, '[Успешно.]')
 
-print('Попытка импорта time...', end='', flush=True)
-try: from time import time
-except ModuleNotFoundError: print('\b'*3, '[Неудачно!]\n'); raise
-else: print('\b'*3, '[Успешно.]')
-
 print('Попытка импорта json...', end='', flush=True)
 try: from json import dump, load
 except ModuleNotFoundError: print('\b'*3, '[Неудачно!]\n'); raise
@@ -56,14 +51,15 @@ def Generate(question:str, model_name:str, history:list[dict]=[], silent:bool=Fa
 	response = chat(model=model_name, messages=history, think=False, stream=True)
 	
 	for chunk in response:
-		content = chunk.message.content
+		content = chunk.message.content or ''
 		if not silent: print(content, end='', flush=True)
 		result += content
+		
+		if chunk.get('done'):
+			if not silent: print('\nДумал:', round(chunk.total_duration*0.000000001, 2), 'секунд.')
+			break
 	
-	if chunk.get('done'):
-		if not silent: print('\nДумал:', round(chunk.total_duration*0.000000001, 2), 'секунд.')
-		history.append({'role': 'assistant', 'content': result})
-	
+	history.append({'role': 'assistant', 'content': result})
 	return result
 
 
@@ -102,10 +98,10 @@ if __name__ == '__main__':
 				for m in models:
 					print(m)
 				user = input('\nВведите имя модели: ').strip()
-				if not (model in models):
+				if not (user in models):
 					print('\nТакой модели нет, используется прошлая!')
 				else:
-					model - user
+					model = user
 			
 			case 'save':
 				HistorySave(history)
