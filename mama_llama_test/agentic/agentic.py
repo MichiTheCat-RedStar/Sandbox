@@ -64,7 +64,7 @@ def SetModel(models:list[dict]) -> str:
 		raise ValueError('Нет такой модели!')
 	
 	if not _HaveTools(user):
-		print('\nБудет недостуна команда task, ведь модель не поддерживает tool-calling!')
+		print('\nБудет недоступна команда task, ведь модель не поддерживает tool-calling!')
 	
 	return user
 
@@ -83,7 +83,7 @@ def Generate(question:str, model_name:str, history:list[dict], silent:bool=False
 		result += content
 		
 		if chunk.done:
-			if not silent: print('\nДумал:', round(chunk.total_duration*0.000000001, 2), 'секунды.')
+			if not silent: print('\nЗаняло:', round(chunk.total_duration*0.000000001, 2), 'секунды.')
 			break
 	
 	history.append({'role': 'assistant', 'content': result})
@@ -200,7 +200,7 @@ if __name__ == '__main__':
 	ASSISTANT_PATH.mkdir(exist_ok=True)
 	history, models_list = [], []
 	
-	print('Загрузки списка моделей...', end='', flush=True)
+	print('Загрузка списка моделей...', end='', flush=True)
 	for obj in ollama_list().models:
 		model = obj.model
 		isTools = _HaveTools(model)
@@ -268,3 +268,9 @@ if __name__ == '__main__':
 	#        уже надо будет подвязать вызов инструментов, более хорошие
 	#        функции с их вызовом и улучшение кода (вроде выбора модели)
 	# TODO: Всё готово и осталось только добавлять больше инструментов!)
+	# TODO: Сжимать историю, удалять последние сообщения или типа того,
+	#        а так же можно сделать настройки для системного промпта и
+	#        для количества лимита шагов для агента
+	# TODO: Так же раз не так хорошо получилось с маленькими моделями,
+	#        то можно взять вектор под более крупные модели
+	# TODO: Сделать защиту путей и прочей безопасности
