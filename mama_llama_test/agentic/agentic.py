@@ -90,10 +90,39 @@ def Generate(question:str, model_name:str, history:list[dict], silent:bool=False
 	return result
 
 
-def AgentLoop(question:str, model_name:str, history:list[dict]) -> str:
+def AgentLoop(question:str, model_name:str, history:list[dict], steps:int=6) -> str:
 	'Генерирует ответ или цепочку вызова инструментов'
 	
-	... # TODO: реализовать task
+	tools = ToolsList()['ai']
+	tool_map = {func.__name__: func for func in tools}
+	history.append({'role': 'user', 'content': question})
+	
+	for _ in range(steps):
+		response = chat(model=model_name, messages=history, tools=tools, think=False)
+		message = response.message
+		history.append(message.model_dump(exclude_none=True))
+		
+		if not message.tool_calls:
+			answer = message.content or ''
+			print(answer)
+			return answer
+		
+		for call in message.tool_calls:
+			name = call.function.name
+			args = call.function.arguments or {}
+			print(f'[Инструмент] {name}({args})')
+			
+			func = tool_map.get(name)
+			try:
+				result = func(**args) if func else f'Unknown tool: {name}'
+			except Exception as error:
+				result = f'Error in `{name}`: {error}'
+			
+			print(f'[Ответ] {result}\n')
+			history.append({'role': 'tool', 'tool_name': name, 'content': str(result)})
+	
+	print('\n[Лимит шагов исчерпан.]')
+	return ''
 
 
 def AgentSpaceShow() -> str:
@@ -125,7 +154,7 @@ def AgentSpaceRead(file_name:str) -> str:
 	if not p.exists():
 		return f'The file "{file_name}" does not exist.'
 	
-	return Path(p).read_text(encoding='utf-8')
+	return p.read_text(encoding='utf-8')
 
 
 def AgentSpaceWrite(file_name:str, content:str) -> str:
@@ -157,8 +186,8 @@ def ToolsList() -> dict:
 	tools = {
 		'ai': [AgentSpaceShow, AgentSpaceRead, AgentSpaceWrite],
 		'user': [
-			'AgentSpaceShow - показывает файлы в пространстве агента самому агенту',
-			'AgentSpaceRead - позволяет агенту читать файлы в своём пространстве',
+			'AgentSpaceShow  - показывает файлы в пространстве агента самому агенту',
+			'AgentSpaceRead  - позволяет агенту читать файлы в своём пространстве',
 			'AgentSpaceWrite - позволяет агенту писать в своё пространство'
 		]
 	}
@@ -191,46 +220,51 @@ if __name__ == '__main__':
 	
 	while True:
 		print('\nquit|send|task|tools|clear|model|save|load')
-		match input('>>> ').strip().lower():
-			case 'quit':
-				print('\nУдачи!')
-				quit()
-			
-			case 'send':
-				user = input('\nВы > ')
-				print('ИИ > ', end='', flush=True)
-				Generate(user, model, history)
-			
-			case 'task':
-				if not _HaveTools(model):
-					print('\ntask не поддерживается, ведь у модели нет tool-calling!')
-				else:
-					... # TODO: реализовать task
-			
-			case 'tools':
-				print('\nВот список инструментов у агента:')
-				for tool in ToolsList()['user']:
-					print(tool)
-			
-			case 'clear':
-				history = []
-				print('\nИстория диалога очищена!')
-			
-			case 'model':
-				try:
-					model = SetModel(models_list)
-				except ValueError:
-					print('\nНет такой модели: оставлена предыдущая.')
-			
-			case 'save':
-				HistorySave(history)
-				print('\nИстория сохранена!')
-			
-			case 'load':
-				history = HistoryLoad()
-				print('\nИстория загружена!')
+		
+		try:
+			match input('>>> ').strip().lower():
+				case 'quit':
+					print('\nУдачи!')
+					quit()
+				
+				case 'send':
+					user = input('\nВы > ')
+					print('ИИ > ', end='', flush=True)
+					Generate(user, model, history)
+				
+				case 'task':
+					if not _HaveTools(model):
+						print('\ntask не поддерживается, ведь у модели нет tool-calling!')
+					else:
+						user = input('\nВы > ')
+						print('ИИ работает...')
+						AgentLoop(user, model, history)
+				
+				case 'tools':
+					print('\nВот список инструментов у агента:')
+					for tool in ToolsList()['user']:
+						print(tool)
+				
+				case 'clear':
+					history = []
+					print('\nИстория диалога очищена!')
+				
+				case 'model':
+					try:
+						model = SetModel(models_list)
+					except ValueError:
+						print('\nНет такой модели: оставлена предыдущая.')
+				
+				case 'save':
+					HistorySave(history)
+					print('\nИстория сохранена!')
+				
+				case 'load':
+					history = HistoryLoad()
+					print('\nИстория загружена!')
+		except KeyboardInterrupt: print(); continue
 	
 	# TODO: Сделал минимальный интерфейс для работы, а в дальнейшем
 	#        уже надо будет подвязать вызов инструментов, более хорошие
 	#        функции с их вызовом и улучшение кода (вроде выбора модели)
-	# TODO: Следующим коммитом реализую agentic loop с tool calling
+	# TODO: Всё готово и осталось только добавлять больше инструментов!)
