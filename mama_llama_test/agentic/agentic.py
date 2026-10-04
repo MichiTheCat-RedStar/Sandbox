@@ -2,7 +2,7 @@
 # MichiTheCat-RedStar (c) 2026
 
 print('agentic - MichiTheCat-RedStar (c) 2026.')
-print('Агент на ollama под маленькие модели...\n')
+print('Агент на ollama под локальные модели...\n')
 # NOTE: Хардкод пути до файлов так и должны быть, в этом и суть,
 #       так же как и в монолитности кода.
 
@@ -20,6 +20,11 @@ else: print('\b'*3, '[Успешно.]')
 
 print('Попытка импорта path...', end='', flush=True)
 try: from pathlib import Path
+except ModuleNotFoundError: print('\b'*3, '[Неудачно!]\n'); raise
+else: print('\b'*3, '[Успешно.]')
+
+print('Попытка импорта time...', end='', flush=True)
+try: from time import time
 except ModuleNotFoundError: print('\b'*3, '[Неудачно!]\n'); raise
 else: print('\b'*3, '[Успешно.]')
 
@@ -75,6 +80,7 @@ def Generate(question:str, model_name:str, history:list[dict], silent:bool=False
 	history.append({'role': 'user', 'content': question})
 	result = ''
 	
+	time_start = time()
 	response = chat(model=model_name, messages=history, think=False, stream=True)
 	
 	for chunk in response:
@@ -83,9 +89,10 @@ def Generate(question:str, model_name:str, history:list[dict], silent:bool=False
 		result += content
 		
 		if chunk.done:
-			if not silent: print('\nЗаняло:', round(chunk.total_duration*0.000000001, 2), 'секунды.')
+			if not silent: print('\n\nЗаняла генерация:', round(chunk.eval_duration*0.000000001, 2), 'секунды.')
 			break
 	
+	if not silent: print('Заняло времени:', round(time()-time_start, 2), 'секунды.')
 	history.append({'role': 'assistant', 'content': result})
 	return result
 
@@ -97,6 +104,7 @@ def AgentLoop(question:str, model_name:str, history:list[dict], steps:int=6) -> 
 	tool_map = {func.__name__: func for func in tools}
 	history.append({'role': 'user', 'content': question})
 	
+	time_start = time()
 	for _ in range(steps):
 		response = chat(model=model_name, messages=history, tools=tools, think=False)
 		message = response.message
@@ -104,13 +112,14 @@ def AgentLoop(question:str, model_name:str, history:list[dict], steps:int=6) -> 
 		
 		if not message.tool_calls:
 			answer = message.content or ''
-			print(answer)
+			print('\nИИ >', answer)
+			print('\nЗаняло времени:', round(time()-time_start, 2), 'секунды.')
 			return answer
 		
 		for call in message.tool_calls:
 			name = call.function.name
 			args = call.function.arguments or {}
-			print(f'[Инструмент] {name}({args})')
+			print(f'[Инструмент] {name}')
 			
 			func = tool_map.get(name)
 			try:
@@ -121,7 +130,8 @@ def AgentLoop(question:str, model_name:str, history:list[dict], steps:int=6) -> 
 			print(f'[Ответ] {result}\n')
 			history.append({'role': 'tool', 'tool_name': name, 'content': str(result)})
 	
-	print('\n[Лимит шагов исчерпан.]')
+	print('[Лимит шагов исчерпан.]')
+	print('\nЗаняло времени:', round(time()-time_start, 2), 'секунды.')
 	return ''
 
 
@@ -133,11 +143,17 @@ def AgentSpaceShow() -> str:
 		List of filenames with extensions'''
 	
 	result = ''
+	ASSISTANT_PATH.mkdir(exist_ok=True)
 	
 	for child in ASSISTANT_PATH.iterdir():
 		result += str(child.name)+'\n'
 	
-	return result.strip()
+	result = result.strip()
+	
+	if result:
+		return result
+	else:
+		return 'No files in the directory.'
 
 
 def AgentSpaceRead(file_name:str) -> str:
@@ -149,6 +165,8 @@ def AgentSpaceRead(file_name:str) -> str:
 	
 	Returns:
 		file content as text'''
+	
+	ASSISTANT_PATH.mkdir(exist_ok=True)
 	
 	p = Path(ASSISTANT_PATH / file_name)
 	if not p.exists():
@@ -167,6 +185,8 @@ def AgentSpaceWrite(file_name:str, content:str) -> str:
 	
 	Returns:
 		Creates a file and reports that it has been written or overwritten'''
+	
+	ASSISTANT_PATH.mkdir(exist_ok=True)
 	
 	isRewrite = False
 	p = Path(ASSISTANT_PATH / file_name)
@@ -197,8 +217,11 @@ def ToolsList() -> dict:
 
 # Точка входа
 if __name__ == '__main__':
+	print('Инициализация настроек и файлов...', end='', flush=True)
 	ASSISTANT_PATH.mkdir(exist_ok=True)
+	with open('history', 'a') as f: pass
 	history, models_list = [], []
+	print('\b'*3, '[Успешно.]')
 	
 	print('Загрузка списка моделей...', end='', flush=True)
 	for obj in ollama_list().models:
@@ -225,7 +248,7 @@ if __name__ == '__main__':
 			match input('>>> ').strip().lower():
 				case 'quit':
 					print('\nУдачи!')
-					quit()
+					break
 				
 				case 'send':
 					user = input('\nВы > ')
@@ -274,3 +297,5 @@ if __name__ == '__main__':
 	# TODO: Так же раз не так хорошо получилось с маленькими моделями,
 	#        то можно взять вектор под более крупные модели
 	# TODO: Сделать защиту путей и прочей безопасности
+	# TODO: Создать функцию для автоматического создания agent_space/ и
+	#        валидации пути, чтобы обрезать возможным обращаться к /..
