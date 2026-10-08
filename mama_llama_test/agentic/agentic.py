@@ -44,16 +44,16 @@ HELP = ('\nВсе доступные команды:'
 		'\nload  - загрузить диалог с ИИ из постоянной памяти'
 		'\nconfs - открыть меню настроек переменных окружения (для продвинутых)')
 SETTINGS = { # DEFAULTS
-	'steps': 6,      # Количество шагов в AgentLoop
-	'context': 12,   # Количество сообщений в history
-	'livetime': 1,   # Количество минут нахождения модели в памяти
-	'threads': 0,    # Сколько используется ядер (0 переводится в None)
-	'predict': 4096, # Максимальное количество генерируемых токенов
-	'temper': 0.8,   # Температура модели
-	'repeat_s': 1.2, # Штраф за повторение токенов
-	'repeat_n': 256, # Сколько токенов будет учтено для штрафа
-	'sys_prom': '',  # Системный промпт (если нет, то не в history)
-	'thinking': 0    # Мышление, которое должно быть 0 или 1
+	'tool_steps':    6,    # Количество шагов в AgentLoop
+	'context':       12,   # Количество сообщений в history
+	'lifetime':      1,    # Количество минут нахождения модели в памяти
+	'threads':       0,    # Сколько используется ядер (0 переводится в None)
+	'predict':       4096, # Максимальное количество генерируемых токенов
+	'temperature':   0.8,  # Температура модели
+	'repeat_lr':     1.2,  # Штраф за повторение токенов
+	'repeat_num':    256,  # Сколько токенов будет учтено для штрафа
+	'system_prompt': '',   # Системный промпт (если нет, то не в history)
+	'is_thinking':   0     # Мышление, которое должно быть 0 или 1
 }
 print('\b'*3, '[Успешно.]')
 
@@ -167,6 +167,13 @@ def HistoryLoad() -> list[dict]:
 		return []
 
 
+def _HistoryContextCheck(history:list[dict]):
+	'Проверка истории на контекстное окно'
+	
+	while len(history) > SETTINGS['context']:
+		del history[0]
+
+
 def _HaveTools(model_name:str) -> bool:
 	'Есть ли ToolCalling у модели'
 	
@@ -197,9 +204,9 @@ def _SettingToOptions() -> Options:
 	
 	return Options(
 		num_predict = SETTINGS['predict'],
-		temperature = SETTINGS['temper'],
-		repeat_penalty = SETTINGS['repeat_s'],
-		repeat_last_n = SETTINGS['repeat_n'],
+		temperature = SETTINGS['temperature'],
+		repeat_penalty = SETTINGS['repeat_lr'],
+		repeat_last_n = SETTINGS['repeat_num'],
 		num_thread = SETTINGS['threads'] or None,
 	)
 
@@ -207,7 +214,7 @@ def _SettingToOptions() -> Options:
 def _SysPrompt(history:list[dict]) -> list[dict]:
 	'Вернуть историю вместе с системным промптом'
 	
-	prompt = SETTINGS.get('sys_prom', '').strip()
+	prompt = SETTINGS.get('system_prompt', '').strip()
 	if not prompt:
 		return history
 	else:
@@ -218,10 +225,11 @@ def Generate(question:str, model_name:str, history:list[dict], silent:bool=False
 	'Генерирует ответ и выводит его'
 	
 	history.append({'role': 'user', 'content': question})
+	_HistoryContextCheck(history)
 	result = ''
 	
 	time_start = time()
-	response = chat(model=model_name, messages=_SysPrompt(history), options=_SettingToOptions(), keep_alive=f'{SETTINGS["livetime"]}m', think=bool(SETTINGS['thinking']), stream=True)
+	response = chat(model=model_name, messages=_SysPrompt(history), options=_SettingToOptions(), keep_alive=f'{SETTINGS["lifetime"]}m', think=bool(SETTINGS['is_thinking']), stream=True)
 	
 	for chunk in response:
 		content = chunk.message.content or ''
@@ -243,10 +251,11 @@ def AgentLoop(question:str, model_name:str, history:list[dict], steps:int) -> st
 	tools = ToolsList()['ai']
 	tool_map = {func.__name__: func for func in tools}
 	history.append({'role': 'user', 'content': question})
+	_HistoryContextCheck(history)
 	
 	time_start = time()
 	for _ in range(steps):
-		response = chat(model=model_name, messages=_SysPrompt(history), options=_SettingToOptions(), keep_alive=f'{SETTINGS["livetime"]}m', tools=tools, think=bool(SETTINGS['thinking']))
+		response = chat(model=model_name, messages=_SysPrompt(history), options=_SettingToOptions(), keep_alive=f'{SETTINGS["lifetime"]}m', tools=tools, think=bool(SETTINGS['is_thinking']))
 		message = response.message
 		history.append(message.model_dump(exclude_none=True))
 		
@@ -404,7 +413,7 @@ if __name__ == '__main__':
 					else:
 						user = input('\nВы > ')
 						print('ИИ работает...')
-						AgentLoop(user, model, history, SETTINGS['steps'])
+						AgentLoop(user, model, history, SETTINGS['tool_steps'])
 				
 				case 'tools':
 					print('\nВот список инструментов у агента:')
