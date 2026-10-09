@@ -3,22 +3,13 @@
 .
 ├── ai_libs
 │   ├── data
-│   │   ├── __pycache__
-│   │   │   ├── reader.cpython-314.pyc
-│   │   │   └── vocab.cpython-314.pyc
 │   │   ├── reader.py
 │   │   └── vocab.py
 │   ├── __init__.py
 │   ├── io
-│   │   ├── __pycache__
-│   │   │   └── saves.cpython-314.pyc
 │   │   └── saves.py
-│   ├── models
-│   │   ├── linear.py
-│   │   └── __pycache__
-│   │       └── linear.cpython-314.pyc
-│   └── __pycache__
-│       └── __init__.cpython-314.pyc
+│   └── models
+│       └── linear.py
 ├── dataset
 │   ├── num-bool_alg_IsEven.jsonl
 │   └── readme.txt
@@ -26,7 +17,7 @@
 ├── readme.txt
 └── saves
 
-10 directories, 14 files
+6 directories, 9 files
 
 
 Будет доробатываться
@@ -35,3 +26,6 @@
 
 
 Продолжаю доделывать, встречайте новый коммит, но test10 ещё не готов для перехода к test11...
+
+
+Последняя версия: Не помню что было в test9->test10, так что будет создан test11 с улучшением и доработкой
